@@ -70,13 +70,10 @@ if ( ! function_exists( 'westcoastracingjunkie_setup' ) ) :
 			'caption',
 		) );
 		
-		function remove_wp_logo( $wp_admin_bar ) {
-			$wp_admin_bar->remove_node( 'wp-logo' );
-		}
-		add_action( 'admin_bar_menu', 'remove_wp_logo', 999 );
 		
 		function remove_wp_nodes() {
 		    global $wp_admin_bar;   
+		    $wp_admin_bar->remove_node( 'wp-logo' );
 		    $wp_admin_bar->remove_node( 'new-post' );
 		    $wp_admin_bar->remove_menu( 'customize' );
 		}
@@ -133,7 +130,7 @@ function westcoastracingjunkie_scripts() {
 	
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '', true );
 	
-	wp_enqueue_script( 'core', get_template_directory_uri() . '/js/core-min.js', , $theme->version, '', true );
+	wp_enqueue_script( 'core', get_template_directory_uri() . '/js/core-min.js', $theme->version, '', true );
 	
 	wp_enqueue_script( 'westcoastracingjunkie-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true );
 	
