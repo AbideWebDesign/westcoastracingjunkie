@@ -16,7 +16,7 @@
 				<div class="col-lg-6 py-4">
 					<h2 class="text-success mb-2"><?php the_field('email_signup_title', 'options'); ?></h2>
 					<p class="text-lg text-white"><?php the_field('email_signup_text', 'options'); ?></p>
-					<?php echo do_shortcode('[gravityform id="1" title="false" description="false"]'); ?>
+					<?php echo do_shortcode('[gravityform id="1" title="false" ajax="true" description="false"]'); ?>
 				</div>
 			</div>
 		</div>

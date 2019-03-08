@@ -133,7 +133,7 @@ function westcoastracingjunkie_scripts() {
 	
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '', true );
 	
-	wp_enqueue_script( 'core', get_template_directory_uri() . '/js/core-min.js', array(), '', true );
+	wp_enqueue_script( 'core', get_template_directory_uri() . '/js/core-min.js', , $theme->version, '', true );
 	
 	wp_enqueue_script( 'westcoastracingjunkie-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true );
 	

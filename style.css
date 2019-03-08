@@ -8557,6 +8557,8 @@ h3 {
 */
 #email-signup {
   background: url(/wp-content/uploads/footer-bg-sample.jpg) center left no-repeat; }
+  #email-signup .gform_confirmation_wrapper {
+    color: white; }
 
 @media (max-width: 767px) {
   #email-signup {
