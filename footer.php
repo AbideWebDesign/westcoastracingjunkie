@@ -23,8 +23,8 @@
 	</div>
 	<footer class="site-footer py-4 bg-light">
 		<div class="container">
-			<div class="row">
-				<div class="col-12 col-lg-auto text-center text-lg-left mb-4 mb-lg-0">
+			<div class="row justify-content-center">
+				<div class="col-12 col-xl-auto text-center text-xl-left mb-4 mb-xl-0">
 					<a class="brand" href="<?php echo home_url(); ?>"><img src="<?php echo home_url('/wp-content/uploads/logo.png'); ?>" class="logo" /></a>
 					<div class="social d-flex justify-content-center mt-2">
 						<div class="pr-2"><a href="https://www.facebook.com/westcoast.racingjunkie" target="_blank"><i class="fab fa-2x fa-facebook"></i></a></div>
@@ -32,7 +32,7 @@
 						<div><a href="https://www.instagram.com/westcoastracingjunkie/" target="_blank"><i class="fab fa-2x fa-instagram"></i></a></div>
 					</div>
 				</div>
-				<div class="col-6 col-lg-auto">
+				<div class="col-auto">
 					<div class="text-upper mb-2"><strong>Quick Links</strong></div>
 					<?php 
 					wp_nav_menu( array( 
@@ -48,7 +48,7 @@
 					);
 				?>
 				</div>
-				<div class="col-6 col-lg-auto pl-lg-4">
+				<div class="col-auto pl-lg-4">
 					<div class="text-upper mb-2"><strong>Account</strong></div>
 					<?php 
 					wp_nav_menu( array( 

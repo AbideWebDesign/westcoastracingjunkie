@@ -11,7 +11,7 @@
 					$link = get_sub_field('ad_image_link');
 				
 				 ?>
-					<div class="col-6 col-md-4 col-lg-12 mb-1">
+					<div class="col-6 col-md-4 col-xl-12 mb-1">
 						<a href="<?php echo $link; ?>" target="_blank"><?php echo wp_get_attachment_image($image['id'], 'Ad Sidebar', false, array('class'=>'img-fluid')); ?></a>
 					</div>
 				

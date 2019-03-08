@@ -25,7 +25,7 @@ $ad_home_2_full_image_link = get_field('ad_home_1_full_ad_image_link', 'options'
 		<div class="bg-white py-5">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-9">
+					<div class="col-xl-9">
 						<h2 class="mb-3 mb-lg-4 text-center">Upcoming Schedule</h2>
 						
 						<?php get_template_part('template-parts/content', 'schedule'); ?>
@@ -34,7 +34,7 @@ $ad_home_2_full_image_link = get_field('ad_home_1_full_ad_image_link', 'options'
 							<a href="<?php echo home_url('/schedule'); ?>" class="btn btn-primary btn-secondary btn-lg"><span>View Upcoming Schedule</span></a>
 						</div>						
 					</div>
-					<div class="col-lg-3 mt-4 mt-lg-0">
+					<div class="col-xl-3 mt-4 mt-xl-0">
 						
 						<?php get_template_part('template-parts/content', 'sidebar-ads'); ?>
 							
@@ -48,15 +48,15 @@ $ad_home_2_full_image_link = get_field('ad_home_1_full_ad_image_link', 'options'
 		<div class="bg-light py-5">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-9">
+					<div class="col-xl-9">
 						<div class="text-center">
-							<h2 class="mb-3 mb-lg-4">Pick Your Plan</h2>
+							<h2 class="mb-3 mb-xl-4">Pick Your Plan</h2>
 						</div>
 						
 						<?php get_template_part('template-parts/content', 'pricing'); ?>
 						
 					</div>
-					<div class="col-lg-3 mt-4 mt-lg-0">
+					<div class="col-xl-3 mt-4 mt-xl-0">
 						
 						<?php get_template_part('template-parts/content', 'sidebar-ads'); ?>
 						

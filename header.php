@@ -67,7 +67,7 @@
 							'theme_location' => 'menu-account', 
 						     'container'       => 'div',
 						     'container_id'    => 'menu-account',
-						     'container_class' => 'd-none d-lg-block',
+						     'container_class' => 'd-none d-xl-block',
 						     'menu_id'         => false,
 						     'menu_class'      => 'navbar-nav',
 						     'fallback_cb'     => 'bs4Navwalker::fallback',
@@ -79,7 +79,7 @@
 							'theme_location' => 'menu-account-member', 
 						     'container'       => 'div',
 						     'container_id'    => 'menu-account',
-						     'container_class' => 'd-none d-lg-block',
+						     'container_class' => 'd-none d-xl-block',
 						     'menu_id'         => false,
 						     'menu_class'      => 'navbar-nav',
 						     'fallback_cb'     => 'bs4Navwalker::fallback',
@@ -88,10 +88,10 @@
 						);
 					}
 				?>
-				<div class="py-half px-1 d-inline-block">
+				<div class="py-half px-1 d-none d-xl-inline-block">
 					<a href="#" id="search-toggle"><i class="fas fa-search"></i></a>
 				</div>
-				<?php shiftnav_toggle( 'shiftnav-main' , '' , array( 'icon' => 'bars' , 'class' => 'shiftnav-toggle-button d-lg-none') ); ?>
+				<?php shiftnav_toggle( 'shiftnav-main' , '' , array( 'icon' => 'bars' , 'class' => 'shiftnav-toggle-button d-xl-none') ); ?>
 			</nav>
 		</div>	
 	</header><!-- #masthead -->

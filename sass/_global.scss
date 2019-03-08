@@ -24,6 +24,12 @@
 		margin-bottom: 0;
 	}
 }
+@media (max-width: 467px) {
+	.container-gutters {
+		padding: 0;
+	}
+}
+
 /*
 ** Typography
 */
@@ -228,6 +234,13 @@ h3 {
 	}
 	#search-toggle {
 		color: #000;
+	}
+}
+@media (max-width: 767px) {
+	#nav-main {
+		.navbar {
+			padding: 1rem 0;
+		}
 	}
 }
 /* 

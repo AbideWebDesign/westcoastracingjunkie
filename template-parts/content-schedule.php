@@ -24,7 +24,7 @@
 ?>
 
 
-<div class="schedule-list container">
+<div class="schedule-list container container-gutters">
 
 	<?php while($query->have_posts()): $query->the_post(); ?>
 		
@@ -32,14 +32,14 @@
 	
 		<?php $date = new DateTime($date); ?>
 		
-			<div class="row mb-1 py-3">
-				<div class="col-auto align-self-stretch">
+			<div class="row mb-1 py-3 flex-md-nowrap">
+				<div class="col-3 col-md-auto align-self-stretch">
 					<div class="bg-dark p-2 text-white text-center">
 						<div><?php echo $date->format('M'); ?></div>
 						<div><?php echo $date->format('d'); ?></div>
 					</div>
 				</div>
-				<div class="col-auto flex-grow-1 align-self-center">
+				<div class="col-9 col-md-auto flex-md-shrink-1 flex-xl-grow-1 align-self-center">
 					<h3 class="card-title mb-2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					<div class="card-foot">
 						<ul class="list-inline m-0">
@@ -48,10 +48,10 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-auto align-self-center text-right d-none d-lg-block">
+				<div class="col-12 col-md-auto align-self-center ml-auto mt-3 mt-md-0">
 					<ul class="list-inline m-0">
 						
-						<?php if (get_field('purchase_event_url')): ?>
+						<?php if (get_field('purchase_event_url') && !is_user_logged_in()): ?>
 						
 							<li class="list-inline-item"><a href="<?php the_field('purchase_event_url'); ?>" class="btn btn-success btn-sm">Purchase Event</a></li>
 							
