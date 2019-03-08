@@ -543,6 +543,9 @@ h3 {
 			margin-bottom: 2em;
 		}
 	}
+	.mepr_price {
+		@extend h3;
+	}
 }
 .mp_login_form {
 	padding: 2em;

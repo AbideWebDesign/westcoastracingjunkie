@@ -4,7 +4,7 @@ Theme URI: https://abidewebdesign.com
 Author: Abide Web Design
 Author URI: https://abidewebdesign.com
 Description: The Official Theme of Westcoast Racing Junkie.
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: westcoastracingjunkie
@@ -77,7 +77,7 @@ hr {
   height: 0;
   overflow: visible; }
 
-h1, h2, h3, h4, .mp_wrapper #mepr-account-welcome-message p, h5, h6 {
+h1, h2, h3, .mp_wrapper .mepr_price, h4, .mp_wrapper #mepr-account-welcome-message p, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.85rem; }
 
@@ -307,7 +307,7 @@ template {
 [hidden] {
   display: none !important; }
 
-h1, h2, h3, h4, .mp_wrapper #mepr-account-welcome-message p, h5, h6,
+h1, h2, h3, .mp_wrapper .mepr_price, h4, .mp_wrapper #mepr-account-welcome-message p, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.85rem;
   font-family: inherit;
@@ -321,7 +321,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: 2.2rem; }
 
-h3, .h3 {
+h3, .mp_wrapper .mepr_price, .h3 {
   font-size: 1.75rem; }
 
 h4, .mp_wrapper #mepr-account-welcome-message p, .h4 {
@@ -8119,12 +8119,10 @@ a.text-dark:hover, a.text-dark:focus {
   img {
     page-break-inside: avoid; }
   p,
-  h2,
-  h3 {
+  h2, h3, .mp_wrapper .mepr_price {
     orphans: 3;
     widows: 3; }
-  h2,
-  h3 {
+  h2, h3, .mp_wrapper .mepr_price {
     page-break-after: avoid; }
   @page {
     size: a3; }
@@ -8190,7 +8188,7 @@ h2, h4, .mp_wrapper #mepr-account-welcome-message p {
   text-transform: uppercase;
   font-weight: bold; }
 
-h3 {
+h3, .mp_wrapper .mepr_price {
   font-family: Oswald, sans-serif;
   text-transform: uppercase; }
 
@@ -8423,13 +8421,13 @@ h3 {
     width: 100%; }
   #section-hero-banner .bg-img-content {
     position: relative; }
-    #section-hero-banner .bg-img-content h1, #section-hero-banner .bg-img-content h3 {
+    #section-hero-banner .bg-img-content h1, #section-hero-banner .bg-img-content h3, #section-hero-banner .bg-img-content .mp_wrapper .mepr_price, .mp_wrapper #section-hero-banner .bg-img-content .mepr_price {
       font-family: Oswald, sans-serif;
       display: inline-block;
       text-transform: uppercase; }
     #section-hero-banner .bg-img-content h1 {
       background-color: #000000; }
-    #section-hero-banner .bg-img-content h3 {
+    #section-hero-banner .bg-img-content h3, #section-hero-banner .bg-img-content .mp_wrapper .mepr_price, .mp_wrapper #section-hero-banner .bg-img-content .mepr_price {
       background-color: #F40000; }
     #section-hero-banner .bg-img-content a {
       margin: 0 auto;
@@ -8541,7 +8539,7 @@ h3 {
 .schedule-list .row:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.05); }
 
-.schedule-list h3 a {
+.schedule-list h3 a, .schedule-list .mp_wrapper .mepr_price a, .mp_wrapper .schedule-list .mepr_price a {
   color: black; }
 
 /* 
