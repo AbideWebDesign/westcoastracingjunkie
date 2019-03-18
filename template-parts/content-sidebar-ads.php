@@ -1,22 +1,43 @@
 <?php if( have_rows('sidebar_ads', 'options') ): ?>
-	<div class="bg-light d-flex por p-lg-3 justify-content-center flex-column text-center">
-		<h4 class="mb-3">Sponsors</h4>
-		<div class="sidebar-ad-wrap">
-			<div class="row">
-				
-				<?php while( have_rows('sidebar_ads', 'options') ): the_row();
-				
-					// vars
-					$image = get_sub_field('ad_image');
-					$link = get_sub_field('ad_image_link');
-				
-				 ?>
-					<div class="col-6 col-md-4 col-xl-12 mb-1">
-						<a href="<?php echo $link; ?>" target="_blank"><?php echo wp_get_attachment_image($image['id'], 'Ad Sidebar', false, array('class'=>'img-fluid')); ?></a>
-					</div>
-				
-				<?php endwhile; ?>
-				
+	<div class="container">
+		<div class="row py-3">
+			<div class="col-12 col-xl-6 mb-3">
+				<h4 class="mb-3 text-center">Advertisers</h4>
+				<div class="sidebar-ad-wrap">
+						
+					<?php while( have_rows('sidebar_ads', 'options') ): the_row();
+					
+						// vars
+						$image = get_sub_field('ad_image');
+						$link = get_sub_field('ad_image_link');
+					
+					 ?>
+						<div class="mb-1">
+							<a href="<?php echo $link; ?>" target="_blank"><?php echo wp_get_attachment_image($image['id'], 'Ad Sidebar', false, array('class'=>'img-fluid img-ad')); ?></a>
+						</div>
+					
+					<?php endwhile; ?>
+						
+				</div>
+			</div>
+			<div class="col-12 col-xl-6">
+				<h4 class="mb-3 text-center">Sponsors</h4>
+				<div class="sidebar-ad-wrap">
+										
+					<?php while( have_rows('sidebar_ads', 'options') ): the_row();
+					
+						// vars
+						$image = get_sub_field('ad_image');
+						$link = get_sub_field('ad_image_link');
+					
+					 ?>
+						<div class="mb-1">
+							<a href="<?php echo $link; ?>" target="_blank"><?php echo wp_get_attachment_image($image['id'], 'Ad Sidebar', false, array('class'=>'img-fluid img-ad')); ?></a>
+						</div>
+					
+					<?php endwhile; ?>
+						
+				</div>
 			</div>
 		</div>
 	</div>

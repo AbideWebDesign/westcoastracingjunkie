@@ -42,7 +42,7 @@
 		</div>
 	</div>
 	<header id="masthead" class="site-header">
-		<div id="nav-main" class="container">
+		<div id="nav-main" class="container-fluid">
 			<nav class="navbar navbar-expand-lg navbar-light">	
 				<a class="brand" href="<?php echo home_url(); ?>"><img src="<?php echo home_url('/wp-content/uploads/logo.png'); ?>" class="logo" /></a>
 				<?php 

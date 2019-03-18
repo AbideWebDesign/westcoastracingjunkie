@@ -28,7 +28,30 @@
 	.container-gutters {
 		padding: 0;
 	}
+	.img-ad {
+		width: 100%;
+	}
 }
+.bs {
+	z-index: 1;
+	position: relative;
+}
+.bsr {
+	box-shadow: 3px 0px 5px -2px $gray-400;
+    -moz-box-shadow: 3px 0px 5px -2px $gray-400;
+    -webkit-box-shadow: 3px 0px 5px -2px $gray-400;
+}
+.bsb {
+	box-shadow: 0px 3px 5px -2px $gray-400;
+    -moz-box-shadow: 0px 3px 5px -2px $gray-400;
+    -webkit-box-shadow: 0px 3px 5px -2px $gray-400;
+}
+.bst {
+	box-shadow: 0px -3px 5px -2px $gray-600;
+    -moz-box-shadow: 0px -3px 5px -2px $gray-600;
+    -webkit-box-shadow: 0px -3px 5px -2px $gray-600;	
+}
+
 
 /*
 ** Typography
@@ -195,10 +218,19 @@ h3 {
 /*
 ** Global Header
 */
+.home {
+	.site-header {
+		@extend .bs;
+		@extend .bsb;
+	}
+}
 .brand img {
 	width: 140px;
 }
 #nav-main {
+	.navbar {
+		padding: .85rem 0;
+	}
 	.navbar-nav {
 		a {
 			color: $red;

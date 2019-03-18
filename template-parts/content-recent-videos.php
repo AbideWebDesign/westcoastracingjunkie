@@ -21,7 +21,7 @@
 	
 ?>
 
-<div class="section bg-light">
+<div class="section">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -40,7 +40,7 @@
 							
 							<?php echo wp_get_attachment_image($image['id'], 'Video Thumbnail', false, array('class' => 'card-img-top')); ?>
 							
-							<div class="card-body">
+							<div class="card-body bg-light">
 								<div class="row">
 									<div class="col-auto col-lg-2 align-self-center text-center">
 										<i class="fas fa-video"></i>

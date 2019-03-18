@@ -12,35 +12,31 @@ get_header();
 
 <?php while(have_posts()): the_post(); ?>
 	
-	<div id="primary-simple" class="content-area bg-light">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="bg-white p-2 p-lg-5 mb-2">
-						<div class="container">
-							<div class="row justify-content-center">
-								<div class="col-lg-8">
-									<h2 class="mb-2"><?php the_title(); ?></h2>
-									<div class="mb-3"><?php the_content(); ?></div>
+	<div id="primary" class="content-area">
+		<div class="container-fluid p-0">
+			<div class="row no-gutters">
+				<div class="col-md-10 col-lg-10 col-xl-9 p-3 py-xl-5 pl-xl-5 bs bsr">
+					<div class="pl-xl-5">	
+						<div class="row">
+							<div class="col-md-8 col-xl-9">											
+								<h2 class="mb-2"><?php the_title(); ?></h2>
+								<div class="mb-3"><?php the_content(); ?></div>
+								<h3 class="mb-2">Inquire about Advertising</h3>
+								<div class="bg-light p-2 p-lg-3">
+									<?php echo do_shortcode('[gravityform id=3 title=false description=false ajax=true tabindex=49]'); ?>
 								</div>
-							</div>	
-						</div>
-					</div>
-				</div>
-				<div class="col-12">
-					<div class="bg-white p-2 p-lg-5">
-						<div class="container">
-							<div class="row justify-content-center">
-								<div class="col-lg-8">
-									<h3 class="mb-2">Inquire about Advertising</h3>
-									<div class="bg-light p-2 p-lg-3">
-										<?php echo do_shortcode('[gravityform id=3 title=false description=false ajax=true tabindex=49]'); ?>
-									</div>
-								</div>
+							</div>
+							<div class="col-md-4 col-xs-3 d-none d-md-block">
+								<?php echo wp_get_attachment_image(get_field('advertise_image'), 'full', false, array('class'=>'img-fluid')); ?>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="col-md-2 col-lg-2 col-xl-3 bg-light">
+					
+					<?php get_template_part('template-parts/content', 'sidebar-ads'); ?>
+					
+				</div>					
 			</div>
 		</div>
 	</div>
