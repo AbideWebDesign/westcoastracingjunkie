@@ -19,6 +19,13 @@ get_header();
 				
 				<?php get_template_part('template-parts/content', 'pricing'); ?>
 				
+				<div class="mt-5">
+					<div class="speed-wrap">
+						<h2 class="mb-3 mb-lg-4 speed speed-alt">Membership FAQs</h2>
+					</div>
+					<?php the_field('plan_content'); ?>
+				</div>
+				
 			</div>
 			<div class="col-md-2 col-lg-2 col-xl-3 bg-light">
 				

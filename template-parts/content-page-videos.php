@@ -1,17 +1,17 @@
 <div class="py-3 bg-light">
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-4">
-				<div class="speed-wrap">
-					<h4 class="mb-0 speed speed-alt">Filters</h4>
+		<div class="row justify-content-center">
+			<div class="col-md-8 col-lg-12 col-xl-3">
+				<div class="speed-wrap text-md-center">
+					<h4 class="mb-2 mb-sm-3 mb-lg-0 speed speed-alt">Filters</h4>
 				</div>
 			</div>
-			<div class="col-lg-8">
-				<div id="search-filters" class="row h-100">
-					<div class="col-auto align-self-center p-lg-0 mt-2 mt-lg-0"><strong>Event: </strong></div>
-					<div class="col-lg-4"><?php echo do_shortcode('[facetwp facet="categories" counts="false"]'); ?></div>
-					<div class="col-auto align-self-center p-lg-0"><strong>Search: </strong></div>
-					<div class="col-lg-4"><?php echo do_shortcode('[facetwp facet="search"]'); ?></div>
+			<div class="col-lg-9 col-xl-7">
+				<div id="search-filters" class="row h-100 justify-content-center">
+					<div class="col-md-auto col-lg-auto align-self-center pr-md-0"><strong>Event: </strong></div>
+					<div class="col-md-auto col-lg-3 col-xl-4"><?php echo do_shortcode('[facetwp facet="categories" counts="false"]'); ?></div>
+					<div class="col-md-auto col-lg-auto align-self-center pr-md-0"><strong>Search: </strong></div>
+					<div class="col-md-auto col-lg-3 col-xl-4"><?php echo do_shortcode('[facetwp facet="search"]'); ?></div>
 					<div class="col-auto align-self-center mt-2 mt-lg-0"><button class="btn btn-primary btn-sm" onclick="FWP.refresh()"><span>Apply</span></button></div>
 				</div>
 				

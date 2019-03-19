@@ -28,14 +28,18 @@ $shortcode = get_field('plan_shortcode');
 						<div class="container">
 							<div class="row">
 								<div class="col-lg-8 order-2 order-lg-1">
+									
 									<?php echo do_shortcode($shortcode); ?>
+								
 								</div>
 								<div class="col-lg-4 order-1 order-lg-2 mb-2 mb-lg-0">
 									<div class="speed-wrap">
 										<h3 class="mb-2 speed speed-alt">Plan Details</h3>
 									</div>
 									<div class="bg-light p-1">
+										
 										<?php the_field('plan_description'); ?>
+										
 										<p><strong>Plan Type: </strong> <?php the_field('plan_type'); ?></p>
 										<p class="mb-0"><strong>Plan Cost: </strong> <?php the_field('plan_cost'); ?></p>
 									</div>
