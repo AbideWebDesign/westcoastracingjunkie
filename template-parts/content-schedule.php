@@ -51,9 +51,9 @@
 				<div class="col-12 col-md-auto align-self-center ml-auto mt-3 mt-md-0">
 					<ul class="list-inline m-0">
 						
-						<?php if (get_field('purchase_event_url') && !is_user_logged_in()): ?>
+						<?php if ($event_reg = get_field('purchase_event_url')): ?>
 						
-							<li class="list-inline-item"><a href="<?php the_field('purchase_event_url'); ?>" class="btn btn-success btn-sm">Purchase Event</a></li>
+							<li class="list-inline-item"><a href="<?php echo get_permalink($event_reg->ID); ?>" class="btn btn-success btn-sm">Purchase</a></li>
 							
 						<?php endif; ?>
 						

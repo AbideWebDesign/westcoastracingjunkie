@@ -52,7 +52,7 @@
 					     'container_id'    => 'menu-primary',
 					     'container_class' => 'collapse navbar-collapse d-none d-lg-block',
 					     'menu_id'         => false,
-					     'menu_class'      => 'navbar-nav',
+					     'menu_class'      => 'navbar-nav ml-auto mr-4',
 					     'depth'           => 2,
 					     'fallback_cb'     => 'bs4Navwalker::fallback',
 					     'walker'          => new bs4Navwalker()
