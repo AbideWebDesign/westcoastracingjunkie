@@ -68,7 +68,7 @@ function videos_archive_overrides( $query ) {
         $query->set( 'meta_query', $meta_query );
         $query->set( 'meta_key', 'broadcast_date' );
         $query->set( 'orderby', 'meta_value' );
-        $query->set( 'order', 'ASC' );
+        $query->set( 'order', 'DESC' );
     
     }
 }
