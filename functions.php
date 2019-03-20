@@ -125,7 +125,7 @@ add_action( 'widgets_init', 'westcoastracingjunkie_widgets_init' );
  */
 function westcoastracingjunkie_scripts() {
 	$theme = wp_get_theme();
-	
+
 	wp_deregister_script( 'jquery' );
 	
 	wp_register_script( 'jquery', 'https://code.jquery.com/jquery-2.2.4.min.js', false, null );
@@ -140,7 +140,7 @@ function westcoastracingjunkie_scripts() {
 	
 	wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' );
 	
-	wp_enqueue_style( 'westcoastracingjunkie-style', get_stylesheet_uri(), $theme->version );
+	wp_enqueue_style( 'westcoastracingjunkie-style', get_stylesheet_uri(), false, $theme->version );
 
 	wp_enqueue_style( 'westcoastracingjunkie-fonts', 'https://fonts.googleapis.com/css?family=Nunito:400,700,800|Oswald:400,700' );
 	
