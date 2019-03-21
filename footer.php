@@ -30,7 +30,7 @@
 						<div class="pr-2"><a href="https://www.facebook.com/westcoast.racingjunkie" target="_blank"><i class="fab fa-2x fa-facebook"></i></a></div>
 						<div class="pr-2"><a href="https://twitter.com/WRacingjunkie" target="_blank"><i class="fab fa-2x fa-twitter"></i></a></div>
 						<div class="pr-2"><a href="https://www.instagram.com/westcoastracingjunkie/" target="_blank"><i class="fab fa-2x fa-instagram"></i></a></div>
-						<div><a href="#" target="_blank"><i class="fab fa-2x fa-youtube"></i></a></div>
+						<div><a href="https://gaming.youtube.com/channel/UCw8A5RHJt7ekTMQ_BLjxWfg/live" target="_blank"><i class="fab fa-2x fa-youtube"></i></a></div>
 					</div>
 				</div>
 				<div class="col-auto">
