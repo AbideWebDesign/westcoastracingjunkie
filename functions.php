@@ -161,8 +161,9 @@ add_image_size('col-5', 542);
 add_image_size('col-6', 650);
 add_image_size('col-7', 759);
 add_image_size('Video Thumbnail', 434, 220, true);
-add_image_size('Ad Full', 870);
+add_image_size('Ad Full', 870, 70, true);
 add_image_size('Ad Sidebar', 260, 80, true);
+add_image_size('Ad Sidebar Sponsor', 260, 170, true);
 add_image_size('Hero Banner', 1800, 600, true);
 add_image_size('Title Banner', 1600, 300, true);
 
@@ -177,8 +178,8 @@ require_once("bs4Navwalker.php");
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
-		'page_title' 	=> 'Theme General Settings',
-		'menu_title'	=> 'Theme Settings',
+		'page_title' 	=> 'Global Fields',
+		'menu_title'	=> 'Global Fields',
 		'menu_slug' 	=> 'theme-general-settings',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false

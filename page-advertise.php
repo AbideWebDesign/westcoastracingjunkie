@@ -26,7 +26,7 @@ get_header();
 									<?php echo do_shortcode('[gravityform id=3 title=false description=false ajax=true tabindex=49]'); ?>
 								</div>
 							</div>
-							<div class="col-md-4 col-xs-3 d-none d-md-block">
+							<div class="col-md-4 col-xl-3 d-none d-md-block">
 								<?php echo wp_get_attachment_image(get_field('advertise_image'), 'full', false, array('class'=>'img-fluid')); ?>
 							</div>
 						</div>

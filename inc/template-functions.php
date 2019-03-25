@@ -38,7 +38,7 @@ add_action( 'wp_head', 'westcoastracingjunkie_pingback_header' );
 
 function get_full_ad($image, $url, $bg_color) {
 	
-	$image_html = wp_get_attachment_image($image['id'], 'Ad Full', false, array('class'=>'img-fluid'));
+	$image_html = wp_get_attachment_image($image, 'Ad Full', false, array('class'=>'img-fluid'));
 	
 	echo 
 	'<div class="bg-' . $bg_color . ' py-3">
@@ -55,6 +55,7 @@ function get_full_ad($image, $url, $bg_color) {
 function videos_archive_overrides( $query ) {
     if ( is_archive( 'videos' ) && $query->is_main_query() && !is_admin()) {
 	    
+/*
 	    $meta_query = array(
 			array(
 				'key' => 'broadcast_date',
@@ -62,10 +63,18 @@ function videos_archive_overrides( $query ) {
 				'type' => 'DATE',
 				'compare' => '<='
 			)
-		);	
-        
+		);
+*/	
+        $tax_query = array(
+			array(
+				'taxonomy' => 'video_cat',
+				'field'    => 'slug',
+				'terms'    => 'on-demand',
+			),
+		);
+		
         $query->set( 'posts_per_page', 9 );
-        $query->set( 'meta_query', $meta_query );
+        $query->set( 'tax_query', $tax_query );
         $query->set( 'meta_key', 'broadcast_date' );
         $query->set( 'orderby', 'meta_value' );
         $query->set( 'order', 'DESC' );

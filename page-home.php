@@ -7,11 +7,6 @@
 
 get_header();
 
-$ad_home_1_full = get_field('ad_home_1_full_ad_image', 'options');
-$ad_home_1_full_image_link = get_field('ad_home_1_full_ad_image_link', 'options');
-$ad_home_2_full = get_field('ad_home_1_full_ad_image', 'options');
-$ad_home_2_full_image_link = get_field('ad_home_1_full_ad_image_link', 'options');
-
 ?>
 
 	<div id="primary" class="content-area">

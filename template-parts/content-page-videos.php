@@ -2,17 +2,17 @@
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 			<div class="col-md-8 col-lg-12 col-xl-3">
-				<div class="speed-wrap text-md-center">
-					<h4 class="mb-2 mb-sm-3 mb-lg-0 speed speed-alt">Filters</h4>
+				<div class="speed-wrap text-md-center mb-2 mb-sm-3 mb-lg-2 mb-xl-0">
+					<h4 class="speed speed-alt">Filters</h4>
 				</div>
 			</div>
-			<div class="col-lg-9 col-xl-7">
+			<div class="col-12 col-xl-9">
 				<div id="search-filters" class="row h-100 justify-content-center">
 					<div class="col-md-auto col-lg-auto align-self-center pr-md-0"><strong>Event: </strong></div>
-					<div class="col-md-auto col-lg-3 col-xl-4"><?php echo do_shortcode('[facetwp facet="categories" counts="false"]'); ?></div>
+					<div class="col-md-auto col-lg-3 col-xl-3"><?php echo do_shortcode('[facetwp facet="categories" counts="false"]'); ?></div>
 					<div class="col-md-auto col-lg-auto align-self-center pr-md-0"><strong>Search: </strong></div>
 					<div class="col-md-auto col-lg-3 col-xl-4"><?php echo do_shortcode('[facetwp facet="search"]'); ?></div>
-					<div class="col-auto align-self-center mt-2 mt-lg-0"><button class="btn btn-primary btn-sm" onclick="FWP.refresh()"><span>Apply</span></button></div>
+					<div class="col-auto align-self-center mt-2 mt-md-0"><button class="btn btn-primary btn-sm" onclick="FWP.refresh()"><span>Apply</span></button></div>
 				</div>
 				
 			</div>

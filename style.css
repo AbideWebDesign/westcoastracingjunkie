@@ -6536,7 +6536,7 @@ button.bg-dark:focus {
 .h-75 {
   height: 75% !important; }
 
-.h-100, #search-filters select, #search-filters .facetwp-search, #search-filters .facetwp-facet {
+.h-100 {
   height: 100% !important; }
 
 .mw-100 {
@@ -8581,6 +8581,9 @@ h3, .mp_wrapper .mepr_price {
   margin: 0; }
   .sidebar-ad-wrap ul li:not(:last-child) {
     margin-bottom: 1em; }
+
+.sidebar-ad-wrap .ad {
+  margin-bottom: 10px; }
 
 /* 
 ** Block - Email Signup 
