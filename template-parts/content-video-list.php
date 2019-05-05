@@ -3,15 +3,16 @@
 		array(
 			'key' => 'broadcast_date',
 			'value' => date('Y-m-d H:i:s'),
-			'type' => 'DATE',
+			'type' => 'DATETIME',
 			'compare' => '<='
 		)
 	);	
 	$args = array (
 		'post_type' => 'videos',
-		'posts_per_page' => '9', 
+		'posts_per_page' => '50', 
 		'post_status' => 'publish',
 		'meta_query' => $meta_query,
+		'meta_type'	=> 'DATE'
 		'meta_key' => 'broadcast_date',
 		'orderby' => 'meta_value',
 		'order' => 'ASC',

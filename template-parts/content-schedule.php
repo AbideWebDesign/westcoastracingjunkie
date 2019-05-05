@@ -1,11 +1,16 @@
 <?php 
+	$date_now = new DateTime();
+	$tz = new DateTimeZone('America/Los_Angeles');
+	$date_now->setTimeZone($tz);
+// 	echo $date_now->format('Y-m-d H:i:s') . '<br>';
+
 
 	$meta_query = array(
 		array(
 			'key' => 'broadcast_date',
-			'value' => date('Y-m-d H:i:s'),
-			'type' => 'DATE',
-			'compare' => '>='
+			'value' => $date_now->format('Y-m-d H:i:s'),
+			'type' => 'DATETIME',
+			'compare' => '>'
 		)
 	);
 	
@@ -29,7 +34,7 @@
 	<?php while($query->have_posts()): $query->the_post(); ?>
 		
 		<?php $date = get_field('broadcast_date', false, false); ?>
-	
+
 		<?php $date = new DateTime($date); ?>
 		
 			<div class="row mb-1 py-3 flex-md-nowrap">

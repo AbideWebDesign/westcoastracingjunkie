@@ -55,16 +55,6 @@ function get_full_ad($image, $url, $bg_color) {
 function videos_archive_overrides( $query ) {
     if ( is_archive( 'videos' ) && $query->is_main_query() && !is_admin()) {
 	    
-/*
-	    $meta_query = array(
-			array(
-				'key' => 'broadcast_date',
-				'value' => date('Y-m-d H:i:s'),
-				'type' => 'DATE',
-				'compare' => '<='
-			)
-		);
-*/	
         $tax_query = array(
 			array(
 				'taxonomy' => 'video_cat',
