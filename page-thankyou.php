@@ -23,8 +23,8 @@ get_header();
 									<h2 class="mb-3">Welcome to Westcoast Racing Junkie!</h2>
 									<?php the_content(); ?>
 									<div class="mt-4 d-flex justify-content-center">
-										<div class="mr-2"><a href="<?php echo home_url('/videos'); ?>" class="btn btn-success">Browse Videos</a></div>
-										<div><a href="<?php echo home_url('/account'); ?>" class="btn btn-alt">View Account</a></div>
+										<div class="mr-2"><a href="<?php echo home_url('/videos'); ?>" class="btn btn-success">Browse On Demand Videos</a></div>
+										<div><a href="<?php echo home_url('/schedule'); ?>" class="btn btn-alt">View Schedule</a></div>
 									</div>
 								</div>
 							</div>	
