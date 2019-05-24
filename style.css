@@ -4,7 +4,7 @@ Theme URI: https://abidewebdesign.com
 Author: Abide Web Design
 Author URI: https://abidewebdesign.com
 Description: The Official Theme of Westcoast Racing Junkie.
-Version: 1.2.0
+Version: 1.2.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: westcoastracingjunkie
@@ -77,7 +77,7 @@ hr {
   height: 0;
   overflow: visible; }
 
-h1, h2, h3, .mp_wrapper .mepr_price, h4, .mp_wrapper #mepr-account-welcome-message p, h5, h6 {
+h1, h2, h3, .mp_wrapper .mepr_price, body .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc, h4, .mp_wrapper #mepr-account-welcome-message p, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.85rem; }
 
@@ -307,7 +307,7 @@ template {
 [hidden] {
   display: none !important; }
 
-h1, h2, h3, .mp_wrapper .mepr_price, h4, .mp_wrapper #mepr-account-welcome-message p, h5, h6,
+h1, h2, h3, .mp_wrapper .mepr_price, body .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc, h4, .mp_wrapper #mepr-account-welcome-message p, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.85rem;
   font-family: inherit;
@@ -321,7 +321,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: 2.2rem; }
 
-h3, .mp_wrapper .mepr_price, .h3 {
+h3, .mp_wrapper .mepr_price, body .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc, .h3 {
   font-size: 1.75rem; }
 
 h4, .mp_wrapper #mepr-account-welcome-message p, .h4 {
@@ -481,7 +481,7 @@ pre {
   margin-right: auto;
   margin-left: auto; }
 
-.row {
+.row, body .ngg-albumoverview {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -496,7 +496,7 @@ pre {
     padding-left: 0; }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
-.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, body .ngg-album-compact, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
@@ -666,7 +666,7 @@ pre {
   .col-sm-5 {
     flex: 0 0 41.6666666667%;
     max-width: 41.6666666667%; }
-  .col-sm-6 {
+  .col-sm-6, body .ngg-album-compact {
     flex: 0 0 50%;
     max-width: 50%; }
   .col-sm-7 {
@@ -760,7 +760,7 @@ pre {
   .col-md-3 {
     flex: 0 0 25%;
     max-width: 25%; }
-  .col-md-4 {
+  .col-md-4, body .ngg-album-compact {
     flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%; }
   .col-md-5 {
@@ -2050,7 +2050,7 @@ textarea.form-control, #search-filters textarea.facetwp-search,
     .form-inline .custom-control-label, .gform_wrapper #gform_1 .custom-control-label {
       margin-bottom: 0; } }
 
-.btn, #nav-main #menu-account .btn-nav a, .button-primary, .mepr-submit, .gform_wrapper .button {
+.btn, #nav-main #menu-account .btn-nav a, .button-primary, .mepr-submit, .gform_wrapper .button, body .ngg_pro_btn {
   display: inline-block;
   font-weight: 400;
   color: #1A1A1A;
@@ -2065,48 +2065,52 @@ textarea.form-control, #search-filters textarea.facetwp-search,
   border-radius: 0;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .btn, #nav-main #menu-account .btn-nav a, .button-primary, .mepr-submit, .gform_wrapper .button {
+    .btn, #nav-main #menu-account .btn-nav a, .button-primary, .mepr-submit, .gform_wrapper .button, body .ngg_pro_btn {
       transition: none; } }
-  .btn:hover, #nav-main #menu-account .btn-nav a:hover, .button-primary:hover, .mepr-submit:hover, .gform_wrapper .button:hover {
+  .btn:hover, #nav-main #menu-account .btn-nav a:hover, .button-primary:hover, .mepr-submit:hover, .gform_wrapper .button:hover, body .ngg_pro_btn:hover {
     color: #1A1A1A;
     text-decoration: none; }
-  .btn:focus, #nav-main #menu-account .btn-nav a:focus, .button-primary:focus, .mepr-submit:focus, .gform_wrapper .button:focus, .btn.focus, #nav-main #menu-account .btn-nav a.focus, .focus.button-primary, .focus.mepr-submit, .gform_wrapper .focus.button {
+  .btn:focus, #nav-main #menu-account .btn-nav a:focus, .button-primary:focus, .mepr-submit:focus, .gform_wrapper .button:focus, body .ngg_pro_btn:focus, .btn.focus, #nav-main #menu-account .btn-nav a.focus, .focus.button-primary, .focus.mepr-submit, .gform_wrapper .focus.button, body .focus.ngg_pro_btn {
     outline: 0;
     box-shadow: 0; }
-  .btn.disabled, #nav-main #menu-account .btn-nav a.disabled, .disabled.button-primary, .disabled.mepr-submit, .gform_wrapper .disabled.button, .btn:disabled, #nav-main #menu-account .btn-nav a:disabled, .button-primary:disabled, .mepr-submit:disabled, .gform_wrapper .button:disabled {
+  .btn.disabled, #nav-main #menu-account .btn-nav a.disabled, .disabled.button-primary, .disabled.mepr-submit, .gform_wrapper .disabled.button, body .disabled.ngg_pro_btn, .btn:disabled, #nav-main #menu-account .btn-nav a:disabled, .button-primary:disabled, .mepr-submit:disabled, .gform_wrapper .button:disabled, body .ngg_pro_btn:disabled {
     opacity: 0.65; }
 
-a.btn.disabled, #nav-main #menu-account .btn-nav a.disabled, a.disabled.button-primary, a.disabled.mepr-submit, .gform_wrapper a.disabled.button,
+a.btn.disabled, #nav-main #menu-account .btn-nav a.disabled, a.disabled.button-primary, a.disabled.mepr-submit, .gform_wrapper a.disabled.button, body a.disabled.ngg_pro_btn,
 fieldset:disabled a.btn,
 fieldset:disabled #nav-main #menu-account .btn-nav a,
 #nav-main #menu-account .btn-nav fieldset:disabled a,
 fieldset:disabled a.button-primary,
 fieldset:disabled a.mepr-submit,
 fieldset:disabled .gform_wrapper a.button,
-.gform_wrapper fieldset:disabled a.button {
+.gform_wrapper fieldset:disabled a.button,
+fieldset:disabled body a.ngg_pro_btn,
+body fieldset:disabled a.ngg_pro_btn {
   pointer-events: none; }
 
-.btn-primary {
+.btn-primary, body .ngg_pro_btn {
   color: #fff;
   background-color: #000;
   border-color: #000; }
-  .btn-primary:hover {
+  .btn-primary:hover, body .ngg_pro_btn:hover {
     color: #fff;
     background-color: black;
     border-color: black; }
-  .btn-primary:focus, .btn-primary.focus {
+  .btn-primary:focus, body .ngg_pro_btn:focus, .btn-primary.focus, body .focus.ngg_pro_btn {
     box-shadow: 0 0 0 0 rgba(38, 38, 38, 0.5); }
-  .btn-primary.disabled, .btn-primary:disabled {
+  .btn-primary.disabled, body .disabled.ngg_pro_btn, .btn-primary:disabled, body .ngg_pro_btn:disabled {
     color: #fff;
     background-color: #000;
     border-color: #000; }
-  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
-  .show > .btn-primary.dropdown-toggle {
+  .btn-primary:not(:disabled):not(.disabled):active, body .ngg_pro_btn:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, body .ngg_pro_btn:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle,
+  body .show > .dropdown-toggle.ngg_pro_btn {
     color: #fff;
     background-color: black;
     border-color: black; }
-    .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-primary.dropdown-toggle:focus {
+    .btn-primary:not(:disabled):not(.disabled):active:focus, body .ngg_pro_btn:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, body .ngg_pro_btn:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-primary.dropdown-toggle:focus,
+    body .show > .dropdown-toggle.ngg_pro_btn:focus {
       box-shadow: 0 0 0 0 rgba(38, 38, 38, 0.5); }
 
 .btn-secondary {
@@ -2458,13 +2462,13 @@ fieldset:disabled .gform_wrapper a.button,
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn, #nav-main #menu-account .btn-nav .btn-group-lg > a, .btn-group-lg > .button-primary, .btn-group-lg > .mepr-submit, .gform_wrapper .btn-group-lg > .button {
+.btn-lg, .btn-group-lg > .btn, #nav-main #menu-account .btn-nav .btn-group-lg > a, .btn-group-lg > .button-primary, .btn-group-lg > .mepr-submit, .gform_wrapper .btn-group-lg > .button, body .btn-group-lg > .ngg_pro_btn {
   padding: 0.5rem 1rem;
   font-size: 1.35rem;
   line-height: 1.5;
   border-radius: 0; }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .button-primary, .btn-group-sm > .mepr-submit, .gform_wrapper .btn-group-sm > .button, #nav-main #menu-account .btn-nav a {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .button-primary, .btn-group-sm > .mepr-submit, .gform_wrapper .btn-group-sm > .button, body .btn-group-sm > .ngg_pro_btn, #nav-main #menu-account .btn-nav a {
   padding: 0.25rem 0.5rem;
   font-size: 0.775rem;
   line-height: 1.5;
@@ -2708,37 +2712,42 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, #nav-main #menu-account .btn-nav .btn-group > a, .btn-group > .button-primary, .btn-group > .mepr-submit, .gform_wrapper .btn-group > .button,
+  .btn-group > .btn, #nav-main #menu-account .btn-nav .btn-group > a, .btn-group > .button-primary, .btn-group > .mepr-submit, .gform_wrapper .btn-group > .button, body .btn-group > .ngg_pro_btn,
   .btn-group-vertical > .btn,
   #nav-main #menu-account .btn-nav .btn-group-vertical > a,
   .btn-group-vertical > .button-primary,
   .btn-group-vertical > .mepr-submit,
-  .gform_wrapper .btn-group-vertical > .button {
+  .gform_wrapper .btn-group-vertical > .button,
+  body .btn-group-vertical > .ngg_pro_btn {
     position: relative;
     flex: 1 1 auto; }
-    .btn-group > .btn:hover, #nav-main #menu-account .btn-nav .btn-group > a:hover, .btn-group > .button-primary:hover, .btn-group > .mepr-submit:hover, .gform_wrapper .btn-group > .button:hover,
+    .btn-group > .btn:hover, #nav-main #menu-account .btn-nav .btn-group > a:hover, .btn-group > .button-primary:hover, .btn-group > .mepr-submit:hover, .gform_wrapper .btn-group > .button:hover, body .btn-group > .ngg_pro_btn:hover,
     .btn-group-vertical > .btn:hover,
     #nav-main #menu-account .btn-nav .btn-group-vertical > a:hover,
     .btn-group-vertical > .button-primary:hover,
     .btn-group-vertical > .mepr-submit:hover,
-    .gform_wrapper .btn-group-vertical > .button:hover {
+    .gform_wrapper .btn-group-vertical > .button:hover,
+    body .btn-group-vertical > .ngg_pro_btn:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, #nav-main #menu-account .btn-nav .btn-group > a:focus, .btn-group > .button-primary:focus, .btn-group > .mepr-submit:focus, .gform_wrapper .btn-group > .button:focus, .btn-group > .btn:active, #nav-main #menu-account .btn-nav .btn-group > a:active, .btn-group > .button-primary:active, .btn-group > .mepr-submit:active, .gform_wrapper .btn-group > .button:active, .btn-group > .btn.active, #nav-main #menu-account .btn-nav .btn-group > a.active, .btn-group > .active.button-primary, .btn-group > .active.mepr-submit, .gform_wrapper .btn-group > .active.button,
+    .btn-group > .btn:focus, #nav-main #menu-account .btn-nav .btn-group > a:focus, .btn-group > .button-primary:focus, .btn-group > .mepr-submit:focus, .gform_wrapper .btn-group > .button:focus, body .btn-group > .ngg_pro_btn:focus, .btn-group > .btn:active, #nav-main #menu-account .btn-nav .btn-group > a:active, .btn-group > .button-primary:active, .btn-group > .mepr-submit:active, .gform_wrapper .btn-group > .button:active, body .btn-group > .ngg_pro_btn:active, .btn-group > .btn.active, #nav-main #menu-account .btn-nav .btn-group > a.active, .btn-group > .active.button-primary, .btn-group > .active.mepr-submit, .gform_wrapper .btn-group > .active.button, body .btn-group > .active.ngg_pro_btn,
     .btn-group-vertical > .btn:focus,
     #nav-main #menu-account .btn-nav .btn-group-vertical > a:focus,
     .btn-group-vertical > .button-primary:focus,
     .btn-group-vertical > .mepr-submit:focus,
     .gform_wrapper .btn-group-vertical > .button:focus,
+    body .btn-group-vertical > .ngg_pro_btn:focus,
     .btn-group-vertical > .btn:active,
     #nav-main #menu-account .btn-nav .btn-group-vertical > a:active,
     .btn-group-vertical > .button-primary:active,
     .btn-group-vertical > .mepr-submit:active,
     .gform_wrapper .btn-group-vertical > .button:active,
+    body .btn-group-vertical > .ngg_pro_btn:active,
     .btn-group-vertical > .btn.active,
     #nav-main #menu-account .btn-nav .btn-group-vertical > a.active,
     .btn-group-vertical > .active.button-primary,
     .btn-group-vertical > .active.mepr-submit,
-    .gform_wrapper .btn-group-vertical > .active.button {
+    .gform_wrapper .btn-group-vertical > .active.button,
+    body .btn-group-vertical > .active.ngg_pro_btn {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2748,25 +2757,27 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child), #nav-main #menu-account .btn-nav .btn-group > a:not(:first-child), .btn-group > .button-primary:not(:first-child), .btn-group > .mepr-submit:not(:first-child), .gform_wrapper .btn-group > .button:not(:first-child),
+.btn-group > .btn:not(:first-child), #nav-main #menu-account .btn-nav .btn-group > a:not(:first-child), .btn-group > .button-primary:not(:first-child), .btn-group > .mepr-submit:not(:first-child), .gform_wrapper .btn-group > .button:not(:first-child), body .btn-group > .ngg_pro_btn:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), #nav-main #menu-account .btn-nav .btn-group > a:not(:last-child):not(.dropdown-toggle), .btn-group > .button-primary:not(:last-child):not(.dropdown-toggle), .btn-group > .mepr-submit:not(:last-child):not(.dropdown-toggle), .gform_wrapper .btn-group > .button:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), #nav-main #menu-account .btn-nav .btn-group > a:not(:last-child):not(.dropdown-toggle), .btn-group > .button-primary:not(:last-child):not(.dropdown-toggle), .btn-group > .mepr-submit:not(:last-child):not(.dropdown-toggle), .gform_wrapper .btn-group > .button:not(:last-child):not(.dropdown-toggle), body .btn-group > .ngg_pro_btn:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 #nav-main #menu-account .btn-nav .btn-group > .btn-group:not(:last-child) > a,
 .btn-group > .btn-group:not(:last-child) > .button-primary,
 .btn-group > .btn-group:not(:last-child) > .mepr-submit,
-.gform_wrapper .btn-group > .btn-group:not(:last-child) > .button {
+.gform_wrapper .btn-group > .btn-group:not(:last-child) > .button,
+body .btn-group > .btn-group:not(:last-child) > .ngg_pro_btn {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child), #nav-main #menu-account .btn-nav .btn-group > a:not(:first-child), .btn-group > .button-primary:not(:first-child), .btn-group > .mepr-submit:not(:first-child), .gform_wrapper .btn-group > .button:not(:first-child),
+.btn-group > .btn:not(:first-child), #nav-main #menu-account .btn-nav .btn-group > a:not(:first-child), .btn-group > .button-primary:not(:first-child), .btn-group > .mepr-submit:not(:first-child), .gform_wrapper .btn-group > .button:not(:first-child), body .btn-group > .ngg_pro_btn:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
 #nav-main #menu-account .btn-nav .btn-group > .btn-group:not(:first-child) > a,
 .btn-group > .btn-group:not(:first-child) > .button-primary,
 .btn-group > .btn-group:not(:first-child) > .mepr-submit,
-.gform_wrapper .btn-group > .btn-group:not(:first-child) > .button {
+.gform_wrapper .btn-group > .btn-group:not(:first-child) > .button,
+body .btn-group > .btn-group:not(:first-child) > .ngg_pro_btn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2780,11 +2791,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, #nav-main #menu-account .btn-nav .btn-group-sm > a + .dropdown-toggle-split, .btn-group-sm > .button-primary + .dropdown-toggle-split, .btn-group-sm > .mepr-submit + .dropdown-toggle-split, .gform_wrapper .btn-group-sm > .button + .dropdown-toggle-split, #nav-main #menu-account .btn-nav a + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, #nav-main #menu-account .btn-nav .btn-group-sm > a + .dropdown-toggle-split, .btn-group-sm > .button-primary + .dropdown-toggle-split, .btn-group-sm > .mepr-submit + .dropdown-toggle-split, .gform_wrapper .btn-group-sm > .button + .dropdown-toggle-split, body .btn-group-sm > .ngg_pro_btn + .dropdown-toggle-split, #nav-main #menu-account .btn-nav a + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, #nav-main #menu-account .btn-nav .btn-group-lg > a + .dropdown-toggle-split, .btn-group-lg > .button-primary + .dropdown-toggle-split, .btn-group-lg > .mepr-submit + .dropdown-toggle-split, .gform_wrapper .btn-group-lg > .button + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, #nav-main #menu-account .btn-nav .btn-group-lg > a + .dropdown-toggle-split, .btn-group-lg > .button-primary + .dropdown-toggle-split, .btn-group-lg > .mepr-submit + .dropdown-toggle-split, .gform_wrapper .btn-group-lg > .button + .dropdown-toggle-split, body .btn-group-lg > .ngg_pro_btn + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2798,51 +2809,58 @@ input[type="button"].btn-block {
   .btn-group-vertical > .button-primary,
   .btn-group-vertical > .mepr-submit,
   .gform_wrapper .btn-group-vertical > .button,
+  body .btn-group-vertical > .ngg_pro_btn,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child), #nav-main #menu-account .btn-nav .btn-group-vertical > a:not(:first-child), .btn-group-vertical > .button-primary:not(:first-child), .btn-group-vertical > .mepr-submit:not(:first-child), .gform_wrapper .btn-group-vertical > .button:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), #nav-main #menu-account .btn-nav .btn-group-vertical > a:not(:first-child), .btn-group-vertical > .button-primary:not(:first-child), .btn-group-vertical > .mepr-submit:not(:first-child), .gform_wrapper .btn-group-vertical > .button:not(:first-child), body .btn-group-vertical > .ngg_pro_btn:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), #nav-main #menu-account .btn-nav .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .button-primary:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .mepr-submit:not(:last-child):not(.dropdown-toggle), .gform_wrapper .btn-group-vertical > .button:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), #nav-main #menu-account .btn-nav .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .button-primary:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .mepr-submit:not(:last-child):not(.dropdown-toggle), .gform_wrapper .btn-group-vertical > .button:not(:last-child):not(.dropdown-toggle), body .btn-group-vertical > .ngg_pro_btn:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
   #nav-main #menu-account .btn-nav .btn-group-vertical > .btn-group:not(:last-child) > a,
   .btn-group-vertical > .btn-group:not(:last-child) > .button-primary,
   .btn-group-vertical > .btn-group:not(:last-child) > .mepr-submit,
-  .gform_wrapper .btn-group-vertical > .btn-group:not(:last-child) > .button {
+  .gform_wrapper .btn-group-vertical > .btn-group:not(:last-child) > .button,
+  body .btn-group-vertical > .btn-group:not(:last-child) > .ngg_pro_btn {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), #nav-main #menu-account .btn-nav .btn-group-vertical > a:not(:first-child), .btn-group-vertical > .button-primary:not(:first-child), .btn-group-vertical > .mepr-submit:not(:first-child), .gform_wrapper .btn-group-vertical > .button:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), #nav-main #menu-account .btn-nav .btn-group-vertical > a:not(:first-child), .btn-group-vertical > .button-primary:not(:first-child), .btn-group-vertical > .mepr-submit:not(:first-child), .gform_wrapper .btn-group-vertical > .button:not(:first-child), body .btn-group-vertical > .ngg_pro_btn:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
   #nav-main #menu-account .btn-nav .btn-group-vertical > .btn-group:not(:first-child) > a,
   .btn-group-vertical > .btn-group:not(:first-child) > .button-primary,
   .btn-group-vertical > .btn-group:not(:first-child) > .mepr-submit,
-  .gform_wrapper .btn-group-vertical > .btn-group:not(:first-child) > .button {
+  .gform_wrapper .btn-group-vertical > .btn-group:not(:first-child) > .button,
+  body .btn-group-vertical > .btn-group:not(:first-child) > .ngg_pro_btn {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, #nav-main #menu-account .btn-nav .btn-group-toggle > a, .btn-group-toggle > .button-primary, .btn-group-toggle > .mepr-submit, .gform_wrapper .btn-group-toggle > .button,
+.btn-group-toggle > .btn, #nav-main #menu-account .btn-nav .btn-group-toggle > a, .btn-group-toggle > .button-primary, .btn-group-toggle > .mepr-submit, .gform_wrapper .btn-group-toggle > .button, body .btn-group-toggle > .ngg_pro_btn,
 .btn-group-toggle > .btn-group > .btn,
 #nav-main #menu-account .btn-nav .btn-group-toggle > .btn-group > a,
 .btn-group-toggle > .btn-group > .button-primary,
 .btn-group-toggle > .btn-group > .mepr-submit,
-.gform_wrapper .btn-group-toggle > .btn-group > .button {
+.gform_wrapper .btn-group-toggle > .btn-group > .button,
+body .btn-group-toggle > .btn-group > .ngg_pro_btn {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], #nav-main #menu-account .btn-nav .btn-group-toggle > a input[type="radio"], .btn-group-toggle > .button-primary input[type="radio"], .btn-group-toggle > .mepr-submit input[type="radio"], .gform_wrapper .btn-group-toggle > .button input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], #nav-main #menu-account .btn-nav .btn-group-toggle > a input[type="radio"], .btn-group-toggle > .button-primary input[type="radio"], .btn-group-toggle > .mepr-submit input[type="radio"], .gform_wrapper .btn-group-toggle > .button input[type="radio"], body .btn-group-toggle > .ngg_pro_btn input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
   #nav-main #menu-account .btn-nav .btn-group-toggle > a input[type="checkbox"],
   .btn-group-toggle > .button-primary input[type="checkbox"],
   .btn-group-toggle > .mepr-submit input[type="checkbox"],
   .gform_wrapper .btn-group-toggle > .button input[type="checkbox"],
+  body .btn-group-toggle > .ngg_pro_btn input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
   #nav-main #menu-account .btn-nav .btn-group-toggle > .btn-group > a input[type="radio"],
   .btn-group-toggle > .btn-group > .button-primary input[type="radio"],
   .btn-group-toggle > .btn-group > .mepr-submit input[type="radio"],
   .gform_wrapper .btn-group-toggle > .btn-group > .button input[type="radio"],
+  body .btn-group-toggle > .btn-group > .ngg_pro_btn input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
   #nav-main #menu-account .btn-nav .btn-group-toggle > .btn-group > a input[type="checkbox"],
   .btn-group-toggle > .btn-group > .button-primary input[type="checkbox"],
   .btn-group-toggle > .btn-group > .mepr-submit input[type="checkbox"],
-  .gform_wrapper .btn-group-toggle > .btn-group > .button input[type="checkbox"] {
+  .gform_wrapper .btn-group-toggle > .btn-group > .button input[type="checkbox"],
+  body .btn-group-toggle > .btn-group > .ngg_pro_btn input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -3404,26 +3422,30 @@ input[type="button"].btn-block {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend #nav-main #menu-account .btn-nav a, #nav-main #menu-account .btn-nav .input-group-prepend a, .input-group-prepend .button-primary, .input-group-prepend .mepr-submit, .input-group-prepend .gform_wrapper .button, .gform_wrapper .input-group-prepend .button,
+  .input-group-prepend .btn, .input-group-prepend #nav-main #menu-account .btn-nav a, #nav-main #menu-account .btn-nav .input-group-prepend a, .input-group-prepend .button-primary, .input-group-prepend .mepr-submit, .input-group-prepend .gform_wrapper .button, .gform_wrapper .input-group-prepend .button, .input-group-prepend body .ngg_pro_btn, body .input-group-prepend .ngg_pro_btn,
   .input-group-append .btn,
   .input-group-append #nav-main #menu-account .btn-nav a,
   #nav-main #menu-account .btn-nav .input-group-append a,
   .input-group-append .button-primary,
   .input-group-append .mepr-submit,
   .input-group-append .gform_wrapper .button,
-  .gform_wrapper .input-group-append .button {
+  .gform_wrapper .input-group-append .button,
+  .input-group-append body .ngg_pro_btn,
+  body .input-group-append .ngg_pro_btn {
     position: relative;
     z-index: 2; }
-    .input-group-prepend .btn:focus, .input-group-prepend #nav-main #menu-account .btn-nav a:focus, #nav-main #menu-account .btn-nav .input-group-prepend a:focus, .input-group-prepend .button-primary:focus, .input-group-prepend .mepr-submit:focus, .input-group-prepend .gform_wrapper .button:focus, .gform_wrapper .input-group-prepend .button:focus,
+    .input-group-prepend .btn:focus, .input-group-prepend #nav-main #menu-account .btn-nav a:focus, #nav-main #menu-account .btn-nav .input-group-prepend a:focus, .input-group-prepend .button-primary:focus, .input-group-prepend .mepr-submit:focus, .input-group-prepend .gform_wrapper .button:focus, .gform_wrapper .input-group-prepend .button:focus, .input-group-prepend body .ngg_pro_btn:focus, body .input-group-prepend .ngg_pro_btn:focus,
     .input-group-append .btn:focus,
     .input-group-append #nav-main #menu-account .btn-nav a:focus,
     #nav-main #menu-account .btn-nav .input-group-append a:focus,
     .input-group-append .button-primary:focus,
     .input-group-append .mepr-submit:focus,
     .input-group-append .gform_wrapper .button:focus,
-    .gform_wrapper .input-group-append .button:focus {
+    .gform_wrapper .input-group-append .button:focus,
+    .input-group-append body .ngg_pro_btn:focus,
+    body .input-group-append .ngg_pro_btn:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn, .input-group-prepend #nav-main #menu-account .btn-nav a + .btn, #nav-main #menu-account .btn-nav .input-group-prepend a + .btn, .input-group-prepend .button-primary + .btn, .input-group-prepend .mepr-submit + .btn, .input-group-prepend .gform_wrapper .button + .btn, .gform_wrapper .input-group-prepend .button + .btn, .input-group-prepend #nav-main #menu-account .btn-nav .btn + a, #nav-main #menu-account .btn-nav .input-group-prepend .btn + a, .input-group-prepend #nav-main #menu-account .btn-nav a + a, #nav-main #menu-account .btn-nav .input-group-prepend a + a, .input-group-prepend #nav-main #menu-account .btn-nav .button-primary + a, #nav-main #menu-account .btn-nav .input-group-prepend .button-primary + a, .input-group-prepend #nav-main #menu-account .btn-nav .mepr-submit + a, #nav-main #menu-account .btn-nav .input-group-prepend .mepr-submit + a, .input-group-prepend .gform_wrapper #nav-main #menu-account .btn-nav .button + a, #nav-main #menu-account .btn-nav .input-group-prepend .gform_wrapper .button + a, .gform_wrapper .input-group-prepend #nav-main #menu-account .btn-nav .button + a, #nav-main #menu-account .btn-nav .gform_wrapper .input-group-prepend .button + a, .input-group-prepend .btn + .button-primary, .input-group-prepend #nav-main #menu-account .btn-nav a + .button-primary, #nav-main #menu-account .btn-nav .input-group-prepend a + .button-primary, .input-group-prepend .button-primary + .button-primary, .input-group-prepend .mepr-submit + .button-primary, .input-group-prepend .gform_wrapper .button + .button-primary, .gform_wrapper .input-group-prepend .button + .button-primary, .input-group-prepend .btn + .mepr-submit, .input-group-prepend #nav-main #menu-account .btn-nav a + .mepr-submit, #nav-main #menu-account .btn-nav .input-group-prepend a + .mepr-submit, .input-group-prepend .button-primary + .mepr-submit, .input-group-prepend .mepr-submit + .mepr-submit, .input-group-prepend .gform_wrapper .button + .mepr-submit, .gform_wrapper .input-group-prepend .button + .mepr-submit, .input-group-prepend .gform_wrapper .btn + .button, .gform_wrapper .input-group-prepend .btn + .button, .input-group-prepend #nav-main #menu-account .btn-nav .gform_wrapper a + .button, .gform_wrapper .input-group-prepend #nav-main #menu-account .btn-nav a + .button, #nav-main #menu-account .btn-nav .input-group-prepend .gform_wrapper a + .button, .gform_wrapper #nav-main #menu-account .btn-nav .input-group-prepend a + .button, .input-group-prepend .gform_wrapper .button-primary + .button, .gform_wrapper .input-group-prepend .button-primary + .button, .input-group-prepend .gform_wrapper .mepr-submit + .button, .gform_wrapper .input-group-prepend .mepr-submit + .button, .input-group-prepend .gform_wrapper .button + .button, .gform_wrapper .input-group-prepend .button + .button,
+  .input-group-prepend .btn + .btn, .input-group-prepend #nav-main #menu-account .btn-nav a + .btn, #nav-main #menu-account .btn-nav .input-group-prepend a + .btn, .input-group-prepend .button-primary + .btn, .input-group-prepend .mepr-submit + .btn, .input-group-prepend .gform_wrapper .button + .btn, .gform_wrapper .input-group-prepend .button + .btn, .input-group-prepend body .ngg_pro_btn + .btn, body .input-group-prepend .ngg_pro_btn + .btn, .input-group-prepend #nav-main #menu-account .btn-nav .btn + a, #nav-main #menu-account .btn-nav .input-group-prepend .btn + a, .input-group-prepend #nav-main #menu-account .btn-nav a + a, #nav-main #menu-account .btn-nav .input-group-prepend a + a, .input-group-prepend #nav-main #menu-account .btn-nav .button-primary + a, #nav-main #menu-account .btn-nav .input-group-prepend .button-primary + a, .input-group-prepend #nav-main #menu-account .btn-nav .mepr-submit + a, #nav-main #menu-account .btn-nav .input-group-prepend .mepr-submit + a, .input-group-prepend .gform_wrapper #nav-main #menu-account .btn-nav .button + a, #nav-main #menu-account .btn-nav .input-group-prepend .gform_wrapper .button + a, .gform_wrapper .input-group-prepend #nav-main #menu-account .btn-nav .button + a, #nav-main #menu-account .btn-nav .gform_wrapper .input-group-prepend .button + a, .input-group-prepend body #nav-main #menu-account .btn-nav .ngg_pro_btn + a, #nav-main #menu-account .btn-nav .input-group-prepend body .ngg_pro_btn + a, body .input-group-prepend #nav-main #menu-account .btn-nav .ngg_pro_btn + a, #nav-main #menu-account .btn-nav body .input-group-prepend .ngg_pro_btn + a, .input-group-prepend .btn + .button-primary, .input-group-prepend #nav-main #menu-account .btn-nav a + .button-primary, #nav-main #menu-account .btn-nav .input-group-prepend a + .button-primary, .input-group-prepend .button-primary + .button-primary, .input-group-prepend .mepr-submit + .button-primary, .input-group-prepend .gform_wrapper .button + .button-primary, .gform_wrapper .input-group-prepend .button + .button-primary, .input-group-prepend body .ngg_pro_btn + .button-primary, body .input-group-prepend .ngg_pro_btn + .button-primary, .input-group-prepend .btn + .mepr-submit, .input-group-prepend #nav-main #menu-account .btn-nav a + .mepr-submit, #nav-main #menu-account .btn-nav .input-group-prepend a + .mepr-submit, .input-group-prepend .button-primary + .mepr-submit, .input-group-prepend .mepr-submit + .mepr-submit, .input-group-prepend .gform_wrapper .button + .mepr-submit, .gform_wrapper .input-group-prepend .button + .mepr-submit, .input-group-prepend body .ngg_pro_btn + .mepr-submit, body .input-group-prepend .ngg_pro_btn + .mepr-submit, .input-group-prepend .gform_wrapper .btn + .button, .gform_wrapper .input-group-prepend .btn + .button, .input-group-prepend #nav-main #menu-account .btn-nav .gform_wrapper a + .button, .gform_wrapper .input-group-prepend #nav-main #menu-account .btn-nav a + .button, #nav-main #menu-account .btn-nav .input-group-prepend .gform_wrapper a + .button, .gform_wrapper #nav-main #menu-account .btn-nav .input-group-prepend a + .button, .input-group-prepend .gform_wrapper .button-primary + .button, .gform_wrapper .input-group-prepend .button-primary + .button, .input-group-prepend .gform_wrapper .mepr-submit + .button, .gform_wrapper .input-group-prepend .mepr-submit + .button, .input-group-prepend .gform_wrapper .button + .button, .gform_wrapper .input-group-prepend .button + .button, .input-group-prepend body .gform_wrapper .ngg_pro_btn + .button, .gform_wrapper .input-group-prepend body .ngg_pro_btn + .button, body .input-group-prepend .gform_wrapper .ngg_pro_btn + .button, .gform_wrapper body .input-group-prepend .ngg_pro_btn + .button, .input-group-prepend body .btn + .ngg_pro_btn, body .input-group-prepend .btn + .ngg_pro_btn, .input-group-prepend #nav-main #menu-account .btn-nav body a + .ngg_pro_btn, body .input-group-prepend #nav-main #menu-account .btn-nav a + .ngg_pro_btn, #nav-main #menu-account .btn-nav .input-group-prepend body a + .ngg_pro_btn, body #nav-main #menu-account .btn-nav .input-group-prepend a + .ngg_pro_btn, .input-group-prepend body .button-primary + .ngg_pro_btn, body .input-group-prepend .button-primary + .ngg_pro_btn, .input-group-prepend body .mepr-submit + .ngg_pro_btn, body .input-group-prepend .mepr-submit + .ngg_pro_btn, .input-group-prepend .gform_wrapper body .button + .ngg_pro_btn, body .input-group-prepend .gform_wrapper .button + .ngg_pro_btn, .gform_wrapper .input-group-prepend body .button + .ngg_pro_btn, body .gform_wrapper .input-group-prepend .button + .ngg_pro_btn, .input-group-prepend body .ngg_pro_btn + .ngg_pro_btn, body .input-group-prepend .ngg_pro_btn + .ngg_pro_btn,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend #nav-main #menu-account .btn-nav a + .input-group-text,
   #nav-main #menu-account .btn-nav .input-group-prepend a + .input-group-text,
@@ -3431,6 +3453,8 @@ input[type="button"].btn-block {
   .input-group-prepend .mepr-submit + .input-group-text,
   .input-group-prepend .gform_wrapper .button + .input-group-text,
   .gform_wrapper .input-group-prepend .button + .input-group-text,
+  .input-group-prepend body .ngg_pro_btn + .input-group-text,
+  body .input-group-prepend .ngg_pro_btn + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
   .input-group-prepend #nav-main #menu-account .btn-nav .input-group-text + a,
@@ -3439,6 +3463,8 @@ input[type="button"].btn-block {
   .input-group-prepend .input-group-text + .mepr-submit,
   .input-group-prepend .gform_wrapper .input-group-text + .button,
   .gform_wrapper .input-group-prepend .input-group-text + .button,
+  .input-group-prepend body .input-group-text + .ngg_pro_btn,
+  body .input-group-prepend .input-group-text + .ngg_pro_btn,
   .input-group-append .btn + .btn,
   .input-group-append #nav-main #menu-account .btn-nav a + .btn,
   #nav-main #menu-account .btn-nav .input-group-append a + .btn,
@@ -3446,6 +3472,8 @@ input[type="button"].btn-block {
   .input-group-append .mepr-submit + .btn,
   .input-group-append .gform_wrapper .button + .btn,
   .gform_wrapper .input-group-append .button + .btn,
+  .input-group-append body .ngg_pro_btn + .btn,
+  body .input-group-append .ngg_pro_btn + .btn,
   .input-group-append #nav-main #menu-account .btn-nav .btn + a,
   #nav-main #menu-account .btn-nav .input-group-append .btn + a,
   .input-group-append #nav-main #menu-account .btn-nav a + a,
@@ -3458,6 +3486,10 @@ input[type="button"].btn-block {
   #nav-main #menu-account .btn-nav .input-group-append .gform_wrapper .button + a,
   .gform_wrapper .input-group-append #nav-main #menu-account .btn-nav .button + a,
   #nav-main #menu-account .btn-nav .gform_wrapper .input-group-append .button + a,
+  .input-group-append body #nav-main #menu-account .btn-nav .ngg_pro_btn + a,
+  #nav-main #menu-account .btn-nav .input-group-append body .ngg_pro_btn + a,
+  body .input-group-append #nav-main #menu-account .btn-nav .ngg_pro_btn + a,
+  #nav-main #menu-account .btn-nav body .input-group-append .ngg_pro_btn + a,
   .input-group-append .btn + .button-primary,
   .input-group-append #nav-main #menu-account .btn-nav a + .button-primary,
   #nav-main #menu-account .btn-nav .input-group-append a + .button-primary,
@@ -3465,6 +3497,8 @@ input[type="button"].btn-block {
   .input-group-append .mepr-submit + .button-primary,
   .input-group-append .gform_wrapper .button + .button-primary,
   .gform_wrapper .input-group-append .button + .button-primary,
+  .input-group-append body .ngg_pro_btn + .button-primary,
+  body .input-group-append .ngg_pro_btn + .button-primary,
   .input-group-append .btn + .mepr-submit,
   .input-group-append #nav-main #menu-account .btn-nav a + .mepr-submit,
   #nav-main #menu-account .btn-nav .input-group-append a + .mepr-submit,
@@ -3472,6 +3506,8 @@ input[type="button"].btn-block {
   .input-group-append .mepr-submit + .mepr-submit,
   .input-group-append .gform_wrapper .button + .mepr-submit,
   .gform_wrapper .input-group-append .button + .mepr-submit,
+  .input-group-append body .ngg_pro_btn + .mepr-submit,
+  body .input-group-append .ngg_pro_btn + .mepr-submit,
   .input-group-append .gform_wrapper .btn + .button,
   .gform_wrapper .input-group-append .btn + .button,
   .input-group-append #nav-main #menu-account .btn-nav .gform_wrapper a + .button,
@@ -3484,6 +3520,26 @@ input[type="button"].btn-block {
   .gform_wrapper .input-group-append .mepr-submit + .button,
   .input-group-append .gform_wrapper .button + .button,
   .gform_wrapper .input-group-append .button + .button,
+  .input-group-append body .gform_wrapper .ngg_pro_btn + .button,
+  .gform_wrapper .input-group-append body .ngg_pro_btn + .button,
+  body .input-group-append .gform_wrapper .ngg_pro_btn + .button,
+  .gform_wrapper body .input-group-append .ngg_pro_btn + .button,
+  .input-group-append body .btn + .ngg_pro_btn,
+  body .input-group-append .btn + .ngg_pro_btn,
+  .input-group-append #nav-main #menu-account .btn-nav body a + .ngg_pro_btn,
+  body .input-group-append #nav-main #menu-account .btn-nav a + .ngg_pro_btn,
+  #nav-main #menu-account .btn-nav .input-group-append body a + .ngg_pro_btn,
+  body #nav-main #menu-account .btn-nav .input-group-append a + .ngg_pro_btn,
+  .input-group-append body .button-primary + .ngg_pro_btn,
+  body .input-group-append .button-primary + .ngg_pro_btn,
+  .input-group-append body .mepr-submit + .ngg_pro_btn,
+  body .input-group-append .mepr-submit + .ngg_pro_btn,
+  .input-group-append .gform_wrapper body .button + .ngg_pro_btn,
+  body .input-group-append .gform_wrapper .button + .ngg_pro_btn,
+  .gform_wrapper .input-group-append body .button + .ngg_pro_btn,
+  body .gform_wrapper .input-group-append .button + .ngg_pro_btn,
+  .input-group-append body .ngg_pro_btn + .ngg_pro_btn,
+  body .input-group-append .ngg_pro_btn + .ngg_pro_btn,
   .input-group-append .btn + .input-group-text,
   .input-group-append #nav-main #menu-account .btn-nav a + .input-group-text,
   #nav-main #menu-account .btn-nav .input-group-append a + .input-group-text,
@@ -3491,6 +3547,8 @@ input[type="button"].btn-block {
   .input-group-append .mepr-submit + .input-group-text,
   .input-group-append .gform_wrapper .button + .input-group-text,
   .gform_wrapper .input-group-append .button + .input-group-text,
+  .input-group-append body .ngg_pro_btn + .input-group-text,
+  body .input-group-append .ngg_pro_btn + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
   .input-group-append #nav-main #menu-account .btn-nav .input-group-text + a,
@@ -3498,7 +3556,9 @@ input[type="button"].btn-block {
   .input-group-append .input-group-text + .button-primary,
   .input-group-append .input-group-text + .mepr-submit,
   .input-group-append .gform_wrapper .input-group-text + .button,
-  .gform_wrapper .input-group-append .input-group-text + .button {
+  .gform_wrapper .input-group-append .input-group-text + .button,
+  .input-group-append body .input-group-text + .ngg_pro_btn,
+  body .input-group-append .input-group-text + .ngg_pro_btn {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -3568,11 +3628,13 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .button-primary,
 .input-group-lg > .input-group-prepend > .mepr-submit,
 .gform_wrapper .input-group-lg > .input-group-prepend > .button,
+body .input-group-lg > .input-group-prepend > .ngg_pro_btn,
 .input-group-lg > .input-group-append > .btn,
 #nav-main #menu-account .btn-nav .input-group-lg > .input-group-append > a,
 .input-group-lg > .input-group-append > .button-primary,
 .input-group-lg > .input-group-append > .mepr-submit,
-.gform_wrapper .input-group-lg > .input-group-append > .button {
+.gform_wrapper .input-group-lg > .input-group-append > .button,
+body .input-group-lg > .input-group-append > .ngg_pro_btn {
   padding: 0.5rem 1rem;
   font-size: 1.35rem;
   line-height: 1.5;
@@ -3621,11 +3683,13 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .button-primary,
 .input-group-sm > .input-group-prepend > .mepr-submit,
 .gform_wrapper .input-group-sm > .input-group-prepend > .button,
+body .input-group-sm > .input-group-prepend > .ngg_pro_btn,
 .input-group-sm > .input-group-append > .btn,
 #nav-main #menu-account .btn-nav .input-group-sm > .input-group-append > a,
 .input-group-sm > .input-group-append > .button-primary,
 .input-group-sm > .input-group-append > .mepr-submit,
-.gform_wrapper .input-group-sm > .input-group-append > .button {
+.gform_wrapper .input-group-sm > .input-group-append > .button,
+body .input-group-sm > .input-group-append > .ngg_pro_btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.775rem;
   line-height: 1.5;
@@ -3638,36 +3702,40 @@ input[type="button"].btn-block {
 .input-group-sm > .facetwp-dropdown {
   padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn, #nav-main #menu-account .btn-nav .input-group > .input-group-prepend > a, .input-group > .input-group-prepend > .button-primary, .input-group > .input-group-prepend > .mepr-submit, .gform_wrapper .input-group > .input-group-prepend > .button,
+.input-group > .input-group-prepend > .btn, #nav-main #menu-account .btn-nav .input-group > .input-group-prepend > a, .input-group > .input-group-prepend > .button-primary, .input-group > .input-group-prepend > .mepr-submit, .gform_wrapper .input-group > .input-group-prepend > .button, body .input-group > .input-group-prepend > .ngg_pro_btn,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
 #nav-main #menu-account .btn-nav .input-group > .input-group-append:not(:last-child) > a,
 .input-group > .input-group-append:not(:last-child) > .button-primary,
 .input-group > .input-group-append:not(:last-child) > .mepr-submit,
 .gform_wrapper .input-group > .input-group-append:not(:last-child) > .button,
+body .input-group > .input-group-append:not(:last-child) > .ngg_pro_btn,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 #nav-main #menu-account .btn-nav .input-group > .input-group-append:last-child > a:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .button-primary:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .mepr-submit:not(:last-child):not(.dropdown-toggle),
 .gform_wrapper .input-group > .input-group-append:last-child > .button:not(:last-child):not(.dropdown-toggle),
+body .input-group > .input-group-append:last-child > .ngg_pro_btn:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, #nav-main #menu-account .btn-nav .input-group > .input-group-append > a, .input-group > .input-group-append > .button-primary, .input-group > .input-group-append > .mepr-submit, .gform_wrapper .input-group > .input-group-append > .button,
+.input-group > .input-group-append > .btn, #nav-main #menu-account .btn-nav .input-group > .input-group-append > a, .input-group > .input-group-append > .button-primary, .input-group > .input-group-append > .mepr-submit, .gform_wrapper .input-group > .input-group-append > .button, body .input-group > .input-group-append > .ngg_pro_btn,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
 #nav-main #menu-account .btn-nav .input-group > .input-group-prepend:not(:first-child) > a,
 .input-group > .input-group-prepend:not(:first-child) > .button-primary,
 .input-group > .input-group-prepend:not(:first-child) > .mepr-submit,
 .gform_wrapper .input-group > .input-group-prepend:not(:first-child) > .button,
+body .input-group > .input-group-prepend:not(:first-child) > .ngg_pro_btn,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 #nav-main #menu-account .btn-nav .input-group > .input-group-prepend:first-child > a:not(:first-child),
 .input-group > .input-group-prepend:first-child > .button-primary:not(:first-child),
 .input-group > .input-group-prepend:first-child > .mepr-submit:not(:first-child),
 .gform_wrapper .input-group > .input-group-prepend:first-child > .button:not(:first-child),
+body .input-group > .input-group-prepend:first-child > .ngg_pro_btn:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -4335,7 +4403,7 @@ input[type="button"].btn-block {
   flex: 1 1 auto;
   padding: 1.25rem; }
 
-.card-title {
+.card-title, body .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc {
   margin-bottom: 0.75rem; }
 
 .card-subtitle {
@@ -4600,7 +4668,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge, #nav-main #menu-account .btn-nav a .badge, .button-primary .badge, .mepr-submit .badge, .gform_wrapper .button .badge {
+.btn .badge, #nav-main #menu-account .btn-nav a .badge, .button-primary .badge, .mepr-submit .badge, .gform_wrapper .button .badge, body .ngg_pro_btn .badge {
   position: relative;
   top: -1px; }
 
@@ -5734,7 +5802,7 @@ button.bg-danger:hover,
 button.bg-danger:focus {
   background-color: #c10000 !important; }
 
-.bg-light, .bg-white .card-body, .page-numbers, .mp_wrapper #mepr-account-nav, .mp_login_form {
+.bg-light, .bg-white .card-body, .page-numbers, .mp_wrapper #mepr-account-nav, .mp_login_form, body .ngg-albumoverview.default-view .ngg-album-compact h4, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p {
   background-color: #f8f9fa !important; }
 
 a.bg-light:hover, .bg-white a.card-body:hover, a.page-numbers:hover, .mp_wrapper a#mepr-account-nav:hover, a.mp_login_form:hover, a.bg-light:focus, .bg-white a.card-body:focus, a.page-numbers:focus, .mp_wrapper a#mepr-account-nav:focus, a.mp_login_form:focus,
@@ -5881,7 +5949,7 @@ button.bg-dark:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex {
+.d-flex, body .ngg-albumoverview.default-view .ngg-album-compact h4, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p {
   display: flex !important; }
 
 .d-inline-flex {
@@ -6120,7 +6188,7 @@ button.bg-dark:focus {
 .align-self-baseline {
   align-self: baseline !important; }
 
-.align-self-stretch {
+.align-self-stretch, body .ngg-albumoverview.default-view .ngg-album-compact h4, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p {
   align-self: stretch !important; }
 
 @media (min-width: 576px) {
@@ -8119,10 +8187,10 @@ a.text-dark:hover, a.text-dark:focus {
   img {
     page-break-inside: avoid; }
   p,
-  h2, h3, .mp_wrapper .mepr_price {
+  h2, h3, .mp_wrapper .mepr_price, body .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc {
     orphans: 3;
     widows: 3; }
-  h2, h3, .mp_wrapper .mepr_price {
+  h2, h3, .mp_wrapper .mepr_price, body .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc {
     page-break-after: avoid; }
   @page {
     size: a3; }
@@ -8213,7 +8281,7 @@ h2, h4, .mp_wrapper #mepr-account-welcome-message p {
   text-transform: uppercase;
   font-weight: bold; }
 
-h3, .mp_wrapper .mepr_price {
+h3, .mp_wrapper .mepr_price, body .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc {
   font-family: Oswald, sans-serif;
   text-transform: uppercase; }
 
@@ -8294,25 +8362,25 @@ h3, .mp_wrapper .mepr_price {
 /*
 ** Buttons
 */
-.btn, #nav-main #menu-account .btn-nav a, .button-primary, .mepr-submit, .gform_wrapper .button {
+.btn, #nav-main #menu-account .btn-nav a, .button-primary, .mepr-submit, .gform_wrapper .button, body .ngg_pro_btn {
   padding: .75rem 2.2rem;
   text-transform: uppercase;
   border-radius: 0;
   font-weight: 700; }
 
-.btn:hover, #nav-main #menu-account .btn-nav a:hover, .button-primary:hover, .mepr-submit:hover, .gform_wrapper .button:hover, .btn:active, #nav-main #menu-account .btn-nav a:active, .button-primary:active, .mepr-submit:active, .gform_wrapper .button:active, .btn-primary:not(:disabled):not(.disabled):active {
+.btn:hover, #nav-main #menu-account .btn-nav a:hover, .button-primary:hover, .mepr-submit:hover, .gform_wrapper .button:hover, body .ngg_pro_btn:hover, .btn:active, #nav-main #menu-account .btn-nav a:active, .button-primary:active, .mepr-submit:active, .gform_wrapper .button:active, body .ngg_pro_btn:active, .btn-primary:not(:disabled):not(.disabled):active, body .ngg_pro_btn:not(:disabled):not(.disabled):active {
   background-color: #1a1919;
   border-color: #1a1919; }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .button-primary, .btn-group-sm > .mepr-submit, .gform_wrapper .btn-group-sm > .button, #nav-main #menu-account .btn-nav a {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .button-primary, .btn-group-sm > .mepr-submit, .gform_wrapper .btn-group-sm > .button, body .btn-group-sm > .ngg_pro_btn, #nav-main #menu-account .btn-nav a {
   padding: .5rem 2rem; }
 
-.btn-primary {
+.btn-primary, body .ngg_pro_btn {
   -webkit-transform: skew(-21deg);
   -moz-transform: skew(-21deg);
   -o-transform: skew(-21deg);
   transform: skew(-21deg); }
-  .btn-primary > span {
+  .btn-primary > span, body .ngg_pro_btn > span {
     display: inline-block;
     transform: skew(21deg); }
 
@@ -8325,7 +8393,7 @@ h3, .mp_wrapper .mepr_price {
     border-color: black;
     color: white; }
 
-.btn-lg, .btn-group-lg > .btn, #nav-main #menu-account .btn-nav .btn-group-lg > a, .btn-group-lg > .button-primary, .btn-group-lg > .mepr-submit, .gform_wrapper .btn-group-lg > .button {
+.btn-lg, .btn-group-lg > .btn, #nav-main #menu-account .btn-nav .btn-group-lg > a, .btn-group-lg > .button-primary, .btn-group-lg > .mepr-submit, .gform_wrapper .btn-group-lg > .button, body .btn-group-lg > .ngg_pro_btn {
   padding: .8rem 2.3rem;
   font-size: 1.1em; }
 
@@ -8334,7 +8402,7 @@ h3, .mp_wrapper .mepr_price {
   border-color: #F40000;
   color: white; }
 
-.btn-alt, #nav-main #menu-account .btn-nav a {
+.btn-alt, #nav-main #menu-account .btn-nav a, body .ngg_pro_btn {
   -webkit-transform: skew(0);
   -moz-transform: skew(0);
   -o-transform: skew(0);
@@ -8342,7 +8410,7 @@ h3, .mp_wrapper .mepr_price {
   background-color: black;
   border-color: black;
   color: white; }
-  .btn-alt:hover, #nav-main #menu-account .btn-nav a:hover {
+  .btn-alt:hover, #nav-main #menu-account .btn-nav a:hover, body .ngg_pro_btn:hover {
     color: white; }
 
 .btn-success:hover, .button-primary:hover, .mepr-submit:hover, .gform_wrapper .button:hover {
@@ -8453,13 +8521,13 @@ h3, .mp_wrapper .mepr_price {
     width: 100%; }
   #section-hero-banner .bg-img-content {
     position: relative; }
-    #section-hero-banner .bg-img-content h1, #section-hero-banner .bg-img-content h3, #section-hero-banner .bg-img-content .mp_wrapper .mepr_price, .mp_wrapper #section-hero-banner .bg-img-content .mepr_price {
+    #section-hero-banner .bg-img-content h1, #section-hero-banner .bg-img-content h3, #section-hero-banner .bg-img-content .mp_wrapper .mepr_price, .mp_wrapper #section-hero-banner .bg-img-content .mepr_price, #section-hero-banner .bg-img-content body .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact h4 #section-hero-banner .bg-img-content .ngg-album-desc, #section-hero-banner .bg-img-content body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p #section-hero-banner .bg-img-content .ngg-album-desc, #section-hero-banner .bg-img-content .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p #section-hero-banner .bg-img-content .ngg-album-desc {
       font-family: Oswald, sans-serif;
       display: inline-block;
       text-transform: uppercase; }
     #section-hero-banner .bg-img-content h1 {
       background-color: #000000; }
-    #section-hero-banner .bg-img-content h3, #section-hero-banner .bg-img-content .mp_wrapper .mepr_price, .mp_wrapper #section-hero-banner .bg-img-content .mepr_price {
+    #section-hero-banner .bg-img-content h3, #section-hero-banner .bg-img-content .mp_wrapper .mepr_price, .mp_wrapper #section-hero-banner .bg-img-content .mepr_price, #section-hero-banner .bg-img-content body .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact h4 #section-hero-banner .bg-img-content .ngg-album-desc, #section-hero-banner .bg-img-content body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p #section-hero-banner .bg-img-content .ngg-album-desc, #section-hero-banner .bg-img-content .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p #section-hero-banner .bg-img-content .ngg-album-desc {
       background-color: #F40000; }
     #section-hero-banner .bg-img-content a {
       margin: 0 auto;
@@ -8512,7 +8580,7 @@ h3, .mp_wrapper .mepr_price {
   color: #6c757d;
   margin-bottom: .2em; }
 
-.card-title {
+.card-title, body .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc {
   font-family: Oswald, sans-serif;
   font-size: 1.35rem;
   margin-bottom: .2em; }
@@ -8568,10 +8636,10 @@ h3, .mp_wrapper .mepr_price {
 /* 
 ** Block - Schedule 
 */
-.schedule-list .row:nth-of-type(odd) {
+.schedule-list .row:nth-of-type(odd), .schedule-list body .ngg-albumoverview:nth-of-type(odd), body .schedule-list .ngg-albumoverview:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.05); }
 
-.schedule-list h3 a, .schedule-list .mp_wrapper .mepr_price a, .mp_wrapper .schedule-list .mepr_price a {
+.schedule-list h3 a, .schedule-list .mp_wrapper .mepr_price a, .mp_wrapper .schedule-list .mepr_price a, .schedule-list body .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc a, body .ngg-albumoverview.default-view .ngg-album-compact h4 .schedule-list .ngg-album-desc a, .schedule-list body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc a, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .schedule-list .ngg-album-desc a, .schedule-list .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc a, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .schedule-list .ngg-album-desc a {
   color: black; }
 
 /* 
@@ -8692,3 +8760,79 @@ h3, .mp_wrapper .mepr_price {
 
 .validation_message {
   display: none; }
+
+/* 
+** Plugin - Next Gen Gallary 
+*/
+body #ngg_pro_links_wrapper {
+  max-width: 100%; }
+
+body .ngg_pro_btn {
+  background-image: none !important;
+  margin: 0 !important; }
+
+body .ngg_pro_btn:hover {
+  background-image: none !important; }
+
+body .ngg_pro_btn:last-of-type {
+  margin: 0 !important; }
+
+body #ngg_pro_checkout > table, body #ngg_pro_checkout_buttons {
+  width: 100%;
+  max-width: 100%; }
+
+body #ngg_pro_checkout_buttons {
+  margin-bottom: 0; }
+
+body .ngg-album-compact h4 .ngg-album-desc, body .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body .ngg-album-compact p .ngg-album-desc {
+  height: auto; }
+
+body .ngg-albumoverview {
+  display: flex !important;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+body .ngg-albumoverview.default-view .ngg-album-compact {
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+  box-shadow: none;
+  border: none;
+  margin: 0 !important; }
+
+body .ngg-albumoverview.default-view .ngg-album-compactbox, body .ngg-albumoverview.default-view .ngg-album-compactbox .Thumb {
+  width: 100%; }
+
+body .ngg-albumoverview.default-view .ngg-album-compact h4, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p {
+  padding: 1rem;
+  margin: 0; }
+
+body .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc {
+  letter-spacing: normal;
+  max-width: 100% !important;
+  width: 100%;
+  margin-bottom: 0; }
+
+body .ngg-albumoverview.default-view .ngg-album-compact h4 a:hover, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p a:hover, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p a:hover {
+  text-decoration: none; }
+
+body .ngg-album-compactbox {
+  padding: 0 !important; }
+
+body .ngg-breadcrumbs {
+  margin-top: 0 !important; }
+
+body #ngg_add_to_cart_container h3, body #ngg_add_to_cart_container .mp_wrapper .mepr_price, .mp_wrapper body #ngg_add_to_cart_container .mepr_price, body #ngg_add_to_cart_container .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact h4 #ngg_add_to_cart_container .ngg-album-desc, body #ngg_add_to_cart_container .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p #ngg_add_to_cart_container .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body #ngg_add_to_cart_container .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p #ngg_add_to_cart_container .ngg-album-desc {
+  margin-bottom: 0 !important;
+  padding: 1em 3em; }
+
+body #ngg_add_to_cart_container hr {
+  display: none; }
+
+body #ngg_add_to_cart_container .nggpl-cart_summary {
+  background-color: #F40000;
+  padding: .5em; }
+  body #ngg_add_to_cart_container .nggpl-cart_summary a, body #ngg_add_to_cart_container .nggpl-cart_summary .nggpl-cart_total {
+    color: white !important; }
+
+body div.nggpl-pricelist_source_accordion {
+  margin-bottom: 0; }

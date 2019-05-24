@@ -19,8 +19,15 @@ get_header();
 <div id="primary" class="content-area bg-light">
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
+			<div class="col-lg-10">
 				<div class="bg-white p-2 p-lg-5">
+					<?php if ( get_field('include_sub_title_bar') ): ?>
+									
+						<div class="speed-wrap">
+							<h2 class="mb-3 mb-lg-4 speed speed-alt"><?php the_field('sub_title'); ?></h2>
+						</div>
+
+					<?php endif; ?>
 					<?php
 					while ( have_posts() ) :
 						the_post();

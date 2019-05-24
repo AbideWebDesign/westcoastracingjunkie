@@ -717,3 +717,99 @@ h3 {
 .validation_message {
   display: none;
 }
+
+/* 
+** Plugin - Next Gen Gallary 
+*/
+body {
+	#ngg_pro_links_wrapper {
+		max-width: 100%;
+	}
+	.ngg_pro_btn {
+		@extend .btn;
+		@extend .btn-primary;
+		@extend .btn-alt;
+		background-image: none !important;
+		margin: 0 !important;
+	}
+	.ngg_pro_btn:hover {
+		background-image: none !important;
+	}
+	.ngg_pro_btn:last-of-type {
+		margin: 0 !important;
+	}
+	#ngg_pro_checkout > table, #ngg_pro_checkout_buttons {
+		width: 100%;
+		max-width: 100%;
+	}
+	#ngg_pro_checkout_buttons {
+		margin-bottom: 0;
+	}
+	.ngg-album-compact h4 .ngg-album-desc {
+		height: auto;
+	}
+	.ngg-albumoverview {
+		@extend .row;
+		display: flex !important;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.ngg-album-compact {
+		@extend .col-md-4;
+		@extend .col-sm-6;
+	}
+	.ngg-albumoverview.default-view .ngg-album-compact {
+		padding-right: 15px !important;
+		padding-left: 15px !important;
+		box-shadow: none;
+		border: none;
+		margin: 0 !important;
+	}
+	.ngg-albumoverview.default-view .ngg-album-compactbox, .ngg-albumoverview.default-view .ngg-album-compactbox .Thumb {
+		width: 100%;
+	}
+	.ngg-albumoverview.default-view .ngg-album-compact h4 {
+		padding: 1rem;
+		margin: 0;
+		@extend .bg-light;
+		@extend .d-flex;
+		@extend .align-self-stretch;
+	}
+	.ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc {
+		@extend h3;
+		@extend .card-title;
+		letter-spacing: normal;
+		max-width: 100% !important;
+		width: 100%;
+		margin-bottom: 0;
+	}
+	.ngg-albumoverview.default-view .ngg-album-compact h4 a:hover {
+		text-decoration: none;
+	}
+	.ngg-album-compactbox {
+		padding: 0 !important;
+	}
+	.ngg-breadcrumbs {
+		margin-top: 0 !important;
+	}
+	#ngg_add_to_cart_container {
+		h3 {
+			margin-bottom: 0 !important;
+			padding: 1em 3em;
+		}
+		hr {
+			display: none;
+		}
+		.nggpl-cart_summary {
+			background-color: $red;
+			padding: .5em; 
+			
+			a, .nggpl-cart_total {
+				color: white !important;
+			}
+		}
+	}
+	div.nggpl-pricelist_source_accordion {
+		margin-bottom: 0;
+	}
+}
