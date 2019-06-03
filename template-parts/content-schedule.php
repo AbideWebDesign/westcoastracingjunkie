@@ -18,7 +18,7 @@
 		'post_type' => 'videos',
 		'posts_per_page' => 10,
 		'post_status' => 'publish',
-		'meta_query' => $meta_query,
+// 		'meta_query' => $meta_query,
 		'meta_key' => 'broadcast_date',
 		'orderby' => 'meta_value',
 		'order' => 'ASC',
