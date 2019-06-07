@@ -31,6 +31,15 @@ get_header();
 	</div>
 	
 <?php endwhile; ?>
-	
+<div id="inplayer-65865" class="inplayer-paywall"></div>
+<script>
+    var paywall = new InplayerPaywall('3dae9162-15bd-4ec3-aa54-5c35ae8eb4f7', [{
+        id: 65865,
+         options: {
+            noPreview: true,
+            noInject: true
+        }
+    }]);
+</script>	
 <?php
 get_footer();

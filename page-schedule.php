@@ -35,6 +35,15 @@ get_header();
 	<?php get_full_ad(get_field('ad_full_width_1_ad_image', 'options'), get_field('ad_full_width_1_ad_link', 'options'), 'dark-light'); ?>
 	
 <?php endif; ?>
-
+<div id="inplayer-65865" class="inplayer-paywall"></div>
+<script>
+    var paywall = new InplayerPaywall('3dae9162-15bd-4ec3-aa54-5c35ae8eb4f7', [{
+        id: 65865,
+         options: {
+            noPreview: true,
+            noInject: true
+        }
+    }]);
+</script>
 <?php
 get_footer();

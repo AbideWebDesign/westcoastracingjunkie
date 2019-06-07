@@ -59,35 +59,13 @@
 						)
 					);
 				?>
-				<?php 
-					
-					if (!is_user_logged_in()) {
-					
-						wp_nav_menu( array( 
-							'theme_location' => 'menu-account', 
-						     'container'       => 'div',
-						     'container_id'    => 'menu-account',
-						     'container_class' => 'd-none d-xl-block',
-						     'menu_id'         => false,
-						     'menu_class'      => 'navbar-nav',
-						     'fallback_cb'     => 'bs4Navwalker::fallback',
-						     'walker'          => new bs4Navwalker()
-							)
-						);
-					} else {
-						wp_nav_menu( array( 
-							'theme_location' => 'menu-account-member', 
-						     'container'       => 'div',
-						     'container_id'    => 'menu-account',
-						     'container_class' => 'd-none d-xl-block',
-						     'menu_id'         => false,
-						     'menu_class'      => 'navbar-nav',
-						     'fallback_cb'     => 'bs4Navwalker::fallback',
-						     'walker'          => new bs4Navwalker()
-							)
-						);
-					}
-				?>
+				<div id="menu-account" class="d-none d-xl-block">
+					<ul id="menu-account-menu-member" class="navbar-nav"><li id="menu-item-166" class="btn-nav menu-item menu-item-type-post_type menu-item-object-page menu-item-166 nav-item"><a href="#" class="nav-link inplayer-paywall-account">Account</a></li>
+						<li id="menu-item-167" class="btn-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-167 nav-item"><a href="#" class="nav-link inplayer-paywall-login ">Login</a></li>
+						<li id="menu-item-167" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-167 nav-item"><a href="#" class="nav-link inplayer-paywall-logout ">Logout</a></li>
+						<li id="menu-item-215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215 nav-item"><a href="http://westcoastracingjunkies.local/advertise/" class="nav-link">Advertise</a></li>
+					</ul>
+				</div>
 				<div class="py-half px-1 d-none d-xl-inline-block">
 					<a href="#" id="search-toggle"><i class="fas fa-search"></i></a>
 				</div>
