@@ -55,13 +55,6 @@
 				</div>
 				<div class="col-12 col-md-auto align-self-center ml-auto mt-3 mt-md-0">
 					<ul class="list-inline m-0">
-						
-						<?php if ($event_reg = get_field('purchase_event_url')): ?>
-						
-							<li class="list-inline-item"><a href="<?php echo get_permalink($event_reg->ID); ?>" class="btn btn-success btn-sm">Purchase</a></li>
-							
-						<?php endif; ?>
-						
 						<li class="list-inline-item"><a href="<?php the_permalink(); ?>" class="btn btn-secondary btn-sm">Watch Page</a></li>
 					</ul>
 				</div>

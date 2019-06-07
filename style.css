@@ -4,7 +4,7 @@ Theme URI: https://abidewebdesign.com
 Author: Abide Web Design
 Author URI: https://abidewebdesign.com
 Description: The Official Theme of Westcoast Racing Junkie.
-Version: 1.2.2
+Version: 1.2.3
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: westcoastracingjunkie
@@ -6064,7 +6064,7 @@ button.bg-dark:focus {
   .embed-responsive::before {
     display: block;
     content: ""; }
-  .embed-responsive .embed-responsive-item,
+  .embed-responsive .embed-responsive-item, .embed-responsive iframe,
   .embed-responsive iframe,
   .embed-responsive embed,
   .embed-responsive object,

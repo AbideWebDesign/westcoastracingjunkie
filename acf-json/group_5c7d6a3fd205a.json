@@ -28,11 +28,11 @@
         },
         {
             "key": "field_5c7d6a4feae77",
-            "label": "Video ID",
-            "name": "video_id",
-            "type": "text",
+            "label": "Video Embed Code",
+            "name": "video_embed_code",
+            "type": "wysiwyg",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -40,10 +40,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "text",
+            "media_upload": 0,
+            "toolbar": "full",
+            "delay": 0
         },
         {
             "key": "field_5c7d6a99eae7b",
@@ -99,28 +99,6 @@
             "display_format": "F j, Y g:i a",
             "return_format": "F j, Y g:i a",
             "first_day": 1
-        },
-        {
-            "key": "field_5c81525f961aa",
-            "label": "Purchase Event URL",
-            "name": "purchase_event_url",
-            "type": "post_object",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "memberpressproduct"
-            ],
-            "taxonomy": "",
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1
         }
     ],
     "location": [
@@ -155,5 +133,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1553546485
+    "modified": 1559944127
 }

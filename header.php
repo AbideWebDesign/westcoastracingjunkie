@@ -17,7 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="icon" href="<?php echo home_url('/wp-content/uploads/favicon.png'); ?>"  type="image/png">
-
+	<script type="text/javascript" src="https://assets.inplayer.com/paywall/latest/paywall.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 
