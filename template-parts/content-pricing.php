@@ -32,7 +32,7 @@
 	</div>
 	<div class="col-12 mt-4 text-center">	
 		<div id="inplayer-65865"></div>		
-		<a id="btn-join" href="#" class="btn btn-primary btn-secondary btn-lg"><span>Join Now</span></a>
+		<a id="btn-join" href="#" class="btn btn-primary btn-secondary btn-lg btn-join"><span>Join Now</span></a>
 		<a href="/plans" class="btn btn-primary btn-lg"><span>Learn More</span></a>
 		
 	</div>
@@ -50,6 +50,11 @@
     });
 
 	document.getElementById('btn-join').addEventListener("click", () => { 
+	   paywall.showPaywall(
+	    {asset: { assetId: 65865 }}
+	   )
+	});
+	document.getElementById('btn-join-top').addEventListener("click", () => { 
 	   paywall.showPaywall(
 	    {asset: { assetId: 65865 }}
 	   )
