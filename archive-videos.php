@@ -21,11 +21,9 @@ get_header();
 				<?php get_template_part('template-parts/content', 'page-videos'); ?>
 				
 			</div>
-			<div class="col-md-2 col-lg-2 col-xl-3 bg-light">
-				
-				<?php get_template_part('template-parts/content', 'sidebar-ads'); ?>
-				
-			</div>
+			
+			<?php get_template_part('template-parts/sidebar', 'default'); ?>
+
 		</div>
 	</div>
 </div>

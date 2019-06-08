@@ -12,13 +12,10 @@
 					<li><span class="fa-li" ><i class="fas fa-check-circle"></i></span> Allows PPV Purchase</li>
 					<li><span class="fa-li" ><i class="fas fa-check-circle"></i></span> Access to On-Demand Video</li>
 				</ul>
-				<div class="mt-auto" id="inplayer-65865">
-					<button id="monthly" href="<?php the_sub_field('pricing_table_button_link'); ?>" class="btn btn-secondary btn-block">Join Now</button>
-				</div>
 			</div>
 		</div>
 	</div>
-		<div class="col-lg-4 align-self-stretch mb-2 mb-lg-0">
+	<div class="col-lg-4 align-self-stretch mb-2 mb-lg-0">
 		<div class="card card-shadow h-100">
 			<div class="bg-dark text-white py-2 text-center text-upper text-sm">YEARLY PACKAGE</div>
 			<div class="d-flex flex-column h-100 p-3">
@@ -33,6 +30,12 @@
 			</div>
 		</div>
 	</div>
+	<div class="col-12 mt-4 text-center">	
+		<div id="inplayer-65865"></div>		
+		<a id="btn-join" href="#" class="btn btn-primary btn-secondary btn-lg"><span>Join Now</span></a>
+		<a href="/plans" class="btn btn-primary btn-lg"><span>Learn More</span></a>
+		
+	</div>
 
 </div>
 <script>
@@ -41,16 +44,14 @@
         id: 65865,
          options: {
             noPreview: true,
-            noInject: true,
-            
-        }
+          }
     }], {
 	    brandingId: 456
     });
-    
-    document.getElementById('monthly').addEventListener("click", () => { 
+
+	document.getElementById('btn-join').addEventListener("click", () => { 
 	   paywall.showPaywall(
-	    { asset: { assetId: 65865, preselectedFeeId: 999 }}
+	    {asset: { assetId: 65865 }}
 	   )
 	});
 </script>

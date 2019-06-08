@@ -4,7 +4,7 @@ Theme URI: https://abidewebdesign.com
 Author: Abide Web Design
 Author URI: https://abidewebdesign.com
 Description: The Official Theme of Westcoast Racing Junkie.
-Version: 1.2.7
+Version: 1.2.8
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: westcoastracingjunkie
@@ -5802,18 +5802,22 @@ button.bg-danger:hover,
 button.bg-danger:focus {
   background-color: #c10000 !important; }
 
-.bg-light, .bg-white .card-body, .page-numbers, .mp_wrapper #mepr-account-nav, .mp_login_form, body .ngg-albumoverview.default-view .ngg-album-compact h4, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p {
+.bg-light, .page-numbers, .schedule-list .row:nth-of-type(odd), .schedule-list body .ngg-albumoverview:nth-of-type(odd), body .schedule-list .ngg-albumoverview:nth-of-type(odd), .mp_wrapper #mepr-account-nav, .mp_login_form, body .ngg-albumoverview.default-view .ngg-album-compact h4, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p {
   background-color: #f8f9fa !important; }
 
-a.bg-light:hover, .bg-white a.card-body:hover, a.page-numbers:hover, .mp_wrapper a#mepr-account-nav:hover, a.mp_login_form:hover, a.bg-light:focus, .bg-white a.card-body:focus, a.page-numbers:focus, .mp_wrapper a#mepr-account-nav:focus, a.mp_login_form:focus,
+a.bg-light:hover, a.page-numbers:hover, .schedule-list a.row:hover:nth-of-type(odd), .schedule-list body a.ngg-albumoverview:hover:nth-of-type(odd), body .schedule-list a.ngg-albumoverview:hover:nth-of-type(odd), .mp_wrapper a#mepr-account-nav:hover, a.mp_login_form:hover, a.bg-light:focus, a.page-numbers:focus, .schedule-list a.row:focus:nth-of-type(odd), .schedule-list body a.ngg-albumoverview:focus:nth-of-type(odd), body .schedule-list a.ngg-albumoverview:focus:nth-of-type(odd), .mp_wrapper a#mepr-account-nav:focus, a.mp_login_form:focus,
 button.bg-light:hover,
-.bg-white button.card-body:hover,
 button.page-numbers:hover,
+.schedule-list button.row:hover:nth-of-type(odd),
+.schedule-list body button.ngg-albumoverview:hover:nth-of-type(odd),
+body .schedule-list button.ngg-albumoverview:hover:nth-of-type(odd),
 .mp_wrapper button#mepr-account-nav:hover,
 button.mp_login_form:hover,
 button.bg-light:focus,
-.bg-white button.card-body:focus,
 button.page-numbers:focus,
+.schedule-list button.row:focus:nth-of-type(odd),
+.schedule-list body button.ngg-albumoverview:focus:nth-of-type(odd),
+body .schedule-list button.ngg-albumoverview:focus:nth-of-type(odd),
 .mp_wrapper button#mepr-account-nav:focus,
 button.mp_login_form:focus {
   background-color: #dae0e5 !important; }
@@ -8359,6 +8363,12 @@ h3, .mp_wrapper .mepr_price, body .ngg-albumoverview.default-view .ngg-album-com
 .bg-dark-light {
   background-color: #1A1A1A; }
 
+.bg-light, .page-numbers, .schedule-list .row:nth-of-type(odd), .schedule-list body .ngg-albumoverview:nth-of-type(odd), body .schedule-list .ngg-albumoverview:nth-of-type(odd), .mp_wrapper #mepr-account-nav, .mp_login_form, body .ngg-albumoverview.default-view .ngg-album-compact h4, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p {
+  background-color: #e9ecef !important; }
+
+#sidebar {
+  background-color: #f8f9fa; }
+
 /*
 ** Buttons
 */
@@ -8421,7 +8431,7 @@ h3, .mp_wrapper .mepr_price, body .ngg-albumoverview.default-view .ngg-album-com
 ** Structure
 */
 .section {
-  padding: 6em 0; }
+  padding: 4em 0; }
 
 /*
 ** Global Header
@@ -8589,6 +8599,9 @@ h3, .mp_wrapper .mepr_price, body .ngg-albumoverview.default-view .ngg-album-com
   font-size: 0.675rem;
   margin-bottom: 0; }
 
+.bg-white .card-body {
+  background-color: #e9ecef; }
+
 /* 
 ** Component - Content Area Simple 
 */
@@ -8636,9 +8649,6 @@ h3, .mp_wrapper .mepr_price, body .ngg-albumoverview.default-view .ngg-album-com
 /* 
 ** Block - Schedule 
 */
-.schedule-list .row:nth-of-type(odd), .schedule-list body .ngg-albumoverview:nth-of-type(odd), body .schedule-list .ngg-albumoverview:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05); }
-
 .schedule-list h3 a, .schedule-list .mp_wrapper .mepr_price a, .mp_wrapper .schedule-list .mepr_price a, .schedule-list body .ngg-albumoverview.default-view .ngg-album-compact h4 .ngg-album-desc a, body .ngg-albumoverview.default-view .ngg-album-compact h4 .schedule-list .ngg-album-desc a, .schedule-list body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .ngg-album-desc a, body .ngg-albumoverview.default-view .ngg-album-compact .mp_wrapper #mepr-account-welcome-message p .schedule-list .ngg-album-desc a, .schedule-list .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .ngg-album-desc a, .mp_wrapper #mepr-account-welcome-message body .ngg-albumoverview.default-view .ngg-album-compact p .schedule-list .ngg-album-desc a {
   color: black; }
 
@@ -8840,7 +8850,7 @@ body div.nggpl-pricelist_source_accordion {
 /* Player */
 @media (min-width: 1200px) {
   .inplayer-preview-box {
-    margin-top: -600px; } }
+    margin-top: -550px; } }
 
 @media (max-width: 1200px) {
   .inplayer-preview-box {

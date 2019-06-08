@@ -31,7 +31,7 @@
 						<a class="d-block card-link" href="<?php the_permalink(); ?>">
 							<div class="card border-none">
 								
-								<?php echo wp_get_attachment_image($image['id'], 'Video Thumbnail', false, array('class' => 'card-img-top')); ?>
+								<?php echo wp_get_attachment_image($image['id'], 'Video Thumbnail', false, array('class' => 'card-img-top img-fluid')); ?>
 								
 								<div class="card-body">
 									<div class="row">
@@ -53,7 +53,7 @@
 				
 				<?php wp_reset_postdata(); ?>
 				
-				<div class="col-12 text-center mt-3">
+				<div class="col-12 text-center mt-2">
 					<a href="<?php echo home_url('/videos'); ?>" class="btn btn-primary btn-secondary"><span>View More</span></a>
 				</div>
 			</div>

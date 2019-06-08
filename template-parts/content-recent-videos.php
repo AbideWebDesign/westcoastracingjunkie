@@ -40,7 +40,7 @@
 						<a class="d-block card-link" href="<?php the_permalink(); ?>">
 							<div class="card border-none">
 								
-								<?php echo wp_get_attachment_image($image['id'], 'Video Thumbnail', false, array('class' => 'card-img-top')); ?>
+								<?php echo wp_get_attachment_image($image['id'], 'Video Thumbnail', false, array('class' => 'card-img-top img-fluid')); ?>
 								
 								<div class="card-body bg-light">
 									<div class="row">

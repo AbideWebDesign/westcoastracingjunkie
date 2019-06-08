@@ -19,7 +19,7 @@
 		</div>
 	</div>
 </div>
-<div id="video-list" class="bg-white p-3 p-xl-5">
+<div id="video-list" class="bg-white p-xl-3">
 	<div class="container-fluid">
 		<div class="row">
 			
@@ -33,7 +33,7 @@
 								
 								<?php $image = get_field('video_thumbnail'); ?>
 								
-								<?php echo wp_get_attachment_image($image['id'], 'Video Thumbnail', false, array('class' => 'card-img-top')); ?>
+								<?php echo wp_get_attachment_image($image['id'], 'Video Thumbnail', false, array('class' => 'card-img-top img-fluid')); ?>
 								
 								<div class="card-body">
 									<div class="row">
