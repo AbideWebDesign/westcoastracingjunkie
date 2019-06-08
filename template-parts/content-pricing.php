@@ -41,9 +41,12 @@
         id: 65865,
          options: {
             noPreview: true,
-            noInject: true
+            noInject: true,
+            
         }
-    }]);
+    }], {
+	    brandingId: 456
+    });
     
     document.getElementById('monthly').addEventListener("click", () => { 
 	   paywall.showPaywall(

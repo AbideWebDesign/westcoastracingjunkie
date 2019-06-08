@@ -61,8 +61,8 @@
 				?>
 				<div id="menu-account" class="d-none d-xl-block">
 					<ul id="menu-account-menu-member" class="navbar-nav"><li id="menu-item-166" class="btn-nav menu-item menu-item-type-post_type menu-item-object-page menu-item-166 nav-item"><a href="#" class="nav-link inplayer-paywall-account">Account</a></li>
-						<li id="menu-item-167" class="btn-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-167 nav-item"><a href="#" class="nav-link inplayer-paywall-login ">Login</a></li>
-						<li id="menu-item-167" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-167 nav-item"><a href="#" class="nav-link inplayer-paywall-logout ">Logout</a></li>
+						<li id="menu-item-167" class="btn-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-167 nav-item"><a href="#" class="nav-link inplayer-paywall-login">Login</a></li>
+						<li id="menu-item-167" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-167 nav-item"><a href="#" class="nav-link inplayer-paywall-logout">Logout</a></li>
 						<li id="menu-item-215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215 nav-item"><a href="http://westcoastracingjunkies.local/advertise/" class="nav-link">Advertise</a></li>
 					</ul>
 				</div>

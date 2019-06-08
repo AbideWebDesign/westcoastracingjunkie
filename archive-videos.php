@@ -29,5 +29,19 @@ get_header();
 		</div>
 	</div>
 </div>
+<div id="inplayer-65865"></div>
+<script>
+	
+    var paywall = new InplayerPaywall('3dae9162-15bd-4ec3-aa54-5c35ae8eb4f7', [{
+        id: 65865,
+         options: {
+            noPreview: true,
+            noInject: true,
+        }
+    }], {
+	    brandingId: 456
+    });
+    
+</script>
 <?php
 get_footer();
