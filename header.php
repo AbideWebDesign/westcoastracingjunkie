@@ -79,7 +79,7 @@
 				<div class="py-half px-1 d-none d-xl-inline-block">
 					<a href="#" id="search-toggle"><i class="fas fa-search"></i></a>
 				</div>
-				<?php shiftnav_toggle( 'shiftnav-main' , '' , array( 'icon' => 'bars' , 'class' => 'shiftnav-toggle-button d-xl-none') ); ?>
+				<?php shiftnav_toggle( 'shiftnav-main' , 'Menu' , array( 'icon' => 'bars' , 'class' => 'shiftnav-toggle-button d-xl-none') ); ?>
 			</nav>
 		</div>	
 	</header><!-- #masthead -->

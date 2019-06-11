@@ -83,6 +83,12 @@ if ( ! function_exists( 'westcoastracingjunkie_setup' ) ) :
 			remove_menu_page( 'edit.php' );
 		}
 		add_action( 'admin_menu', 'remove_menus' );
+		
+		add_action( 'get_footer' , 'my_shiftnav_api' );
+		
+		function my_shiftnav_api(){
+		    shiftnav( 'shiftnav-main' );
+		}
 	}
 endif;
 add_action( 'after_setup_theme', 'westcoastracingjunkie_setup' );
@@ -192,4 +198,15 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
+}
+
+add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
+
+function add_specific_menu_location_atts( $atts, $item, $args ) {
+    // check if the item is in the primary menu
+    if( $item->title == 'Account' ) {
+      // add the desired attributes:
+      $atts['class'] = 'inplayer-paywall-login';
+    }
+    return $atts;
 }
