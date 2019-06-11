@@ -18,6 +18,16 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="icon" href="<?php echo home_url('/wp-content/uploads/favicon.png'); ?>"  type="image/png">
 	<script type="text/javascript" src="https://assets.inplayer.com/paywall/latest/paywall.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141734405-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-141734405-1');
+	</script>
+
 	<?php wp_head(); ?>
 </head>
 

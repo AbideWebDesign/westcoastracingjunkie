@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<div class="embed-responsive embed-responsive-16by9">
+				<div class="">
 					<?php the_field('video_embed_code'); ?>
 				</div>
 				<div class="my-3 text-white">

@@ -153,6 +153,11 @@ h3 {
 #sidebar {
 	background-color: $gray-100;
 }
+body {
+	.shiftnav.shiftnav-nojs.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item > .shiftnav-target:hover, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item.shiftnav-active > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item.shiftnav-in-transition > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item.current-menu-item > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu > li.shiftnav-sub-accordion.current-menu-ancestor > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu > li.shiftnav-sub-shift.current-menu-ancestor > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu.shiftnav-active-highlight li.menu-item > .shiftnav-target:active, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu.shiftnav-active-on-hover li.menu-item > .shiftnav-target:hover {
+		background: $red;
+	}
+}
 /*
 ** Buttons
 */
@@ -820,36 +825,4 @@ body {
 	div.nggpl-pricelist_source_accordion {
 		margin-bottom: 0;
 	}
-}
-
-/* Player */
-
-@media (min-width: map-get($grid-breakpoints, 'xl')) {
-	.inplayer-preview-box  {
-			margin-top: -550px;
-	}
-}
-@media (max-width: map-get($grid-breakpoints, 'xl')) {
-	.inplayer-preview-box  {
-			margin-top: -400px;
-	}
-
-}
-@media (max-width: map-get($grid-breakpoints, 'lg')) {
-	.inplayer-preview-box  {
-			margin-top: -300px;
-	}
-
-}
-@media (max-width: map-get($grid-breakpoints, 'md')) {
-	.inplayer-preview-box  {
-			margin-top: -200px;
-	}
-
-}
-@media (max-width: map-get($grid-breakpoints, 'sm')) {
-	.inplayer-preview-box  {
-			margin-top: -150px;
-	}
-
 }

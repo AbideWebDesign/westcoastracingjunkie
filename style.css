@@ -4,7 +4,7 @@ Theme URI: https://abidewebdesign.com
 Author: Abide Web Design
 Author URI: https://abidewebdesign.com
 Description: The Official Theme of Westcoast Racing Junkie.
-Version: 1.2.10
+Version: 1.3.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: westcoastracingjunkie
@@ -8369,6 +8369,9 @@ h3, .mp_wrapper .mepr_price, body .ngg-albumoverview.default-view .ngg-album-com
 #sidebar {
   background-color: #f8f9fa; }
 
+body .shiftnav.shiftnav-nojs.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item > .shiftnav-target:hover, body .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item.shiftnav-active > .shiftnav-target, body .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item.shiftnav-in-transition > .shiftnav-target, body .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item.current-menu-item > .shiftnav-target, body .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu > li.shiftnav-sub-accordion.current-menu-ancestor > .shiftnav-target, body .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu > li.shiftnav-sub-shift.current-menu-ancestor > .shiftnav-target, body .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu.shiftnav-active-highlight li.menu-item > .shiftnav-target:active, body .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu.shiftnav-active-on-hover li.menu-item > .shiftnav-target:hover {
+  background: #F40000; }
+
 /*
 ** Buttons
 */
@@ -8846,24 +8849,3 @@ body #ngg_add_to_cart_container .nggpl-cart_summary {
 
 body div.nggpl-pricelist_source_accordion {
   margin-bottom: 0; }
-
-/* Player */
-@media (min-width: 1200px) {
-  .inplayer-preview-box {
-    margin-top: -550px; } }
-
-@media (max-width: 1200px) {
-  .inplayer-preview-box {
-    margin-top: -400px; } }
-
-@media (max-width: 992px) {
-  .inplayer-preview-box {
-    margin-top: -300px; } }
-
-@media (max-width: 768px) {
-  .inplayer-preview-box {
-    margin-top: -200px; } }
-
-@media (max-width: 576px) {
-  .inplayer-preview-box {
-    margin-top: -150px; } }
