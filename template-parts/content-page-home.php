@@ -12,13 +12,15 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="mb-3 mb-lg-4 text-center">Upcoming Schedule</h2>
+				<h2 class="mb-3 mb-lg-4 text-center">Full Schedule</h2>
 				
 				<?php get_template_part('template-parts/content', 'schedule'); ?>
 				
+<!--
 				<div class="text-center mt-3 mt-lg-3">
 					<a href="<?php echo home_url('/schedule'); ?>" class="btn btn-primary btn-secondary btn-lg"><span>View Upcoming Schedule</span></a>
-				</div>						
+				</div>	
+-->					
 			</div>
 		</div>
 	</div>
