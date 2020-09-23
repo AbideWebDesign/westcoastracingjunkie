@@ -27,7 +27,7 @@
 				<div class="col-12 col-xl-auto text-center text-xl-left mb-4 mb-xl-0">
 					<a class="brand" href="<?php echo home_url(); ?>"><img src="<?php echo home_url('/wp-content/uploads/logo.png'); ?>" class="logo" /></a>
 					<div class="social d-flex justify-content-center mt-2">
-						<div class="pr-2"><a href="https://www.facebook.com/westcoast.racingjunkie" target="_blank"><i class="fab fa-2x fa-facebook"></i></a></div>
+						<div class="pr-2"><a href="https://www.facebook.com/WestCoast-Racing-TV-113074913857301/" target="_blank"><i class="fab fa-2x fa-facebook"></i></a></div>
 						<div class="pr-2"><a href="https://twitter.com/WRacingjunkie" target="_blank"><i class="fab fa-2x fa-twitter"></i></a></div>
 						<div class="pr-2"><a href="https://www.instagram.com/westcoastracingjunkie/" target="_blank"><i class="fab fa-2x fa-instagram"></i></a></div>
 						<div><a href="https://gaming.youtube.com/channel/UCw8A5RHJt7ekTMQ_BLjxWfg/live" target="_blank"><i class="fab fa-2x fa-youtube"></i></a></div>
